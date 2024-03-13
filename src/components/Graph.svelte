@@ -532,6 +532,11 @@
                 0% { opacity: 0; }
                 100% { opacity: 1; }
         }
+
+	@keyframes fadeOut {
+                100% { opacity: 0; }
+                0% { opacity: 1; }
+        }
         .map_plot_split {       
                 text-align: center;
                 width: 100%;
