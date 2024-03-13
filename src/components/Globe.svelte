@@ -394,14 +394,21 @@
                     cx={coord_proj_cx(d)}
                     cy={coord_proj_cy(d)}
                     r={(4 * d.Volcano_explosive_index + 4) / 2}
-                    fill="magenta"
+                    fill="gray"
+                  />
+		<circle
+                  class="special"
+                    cx={coord_proj_cx(d)}
+                    cy={coord_proj_cy(d)}
+                    r={(4 * 5+ 4)}
+                    fill="gold"
                   />
                 {/if}
               {/each}
 
-            <circle cx="-35" cy="500" r="20" fill="orange" opacity={0.6} />
-            <text x="-10" y="505" font-size="16px"> Explosivity less than 5 </text>
-            <circle cx="-35" cy="550" r="20" fill="red" opacity={0.6} />
+            <circle cx="-45" cy="490" r="20" fill="orange" opacity={0.6} />
+            <text x="-10" y="495" font-size="16px"> Explosivity less than 5 </text>
+            <circle cx="-45" cy="550" r="30" fill="red" opacity={0.6} />
             <text x="-10" y="550" font-size="16px"> Explosivity greater </text>
             <text x="-10" y="565" font-size="16px"> than or equal to 5 </text>
           </svg>
@@ -427,6 +434,12 @@
         0% { opacity: 0; }
         100% { opacity: 1; }
     }
+
+    @keyframes fadeOut {
+        100% { opacity: 0; }
+        0% { opacity: 1; }
+    }
+
     #tooltip {
         background-color: white;
         padding: 8px;
@@ -465,6 +478,12 @@
 
   .erupt {
     animation: fadeIn 0.5s;
+  }
+
+  .special {
+    animation: fadeIn 2s;
+    animation: fadeOut 5s;
+    animation-fill-mode: forwards;
   }
 
   .map_plot_split {       
