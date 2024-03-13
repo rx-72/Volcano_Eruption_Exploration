@@ -1,11 +1,13 @@
 <script>
         import * as d3 from 'd3';
         import { onMount } from 'svelte';
+        import { writable } from 'svelte/store';
 	import * as topojson from 'topojson-client';
 	import { geoPath, geoAlbersUsa } from 'd3-geo';
 	import { draw } from 'svelte/transition';
         import { geoOrthographic, geoGraticule10} from "d3-geo";
 	import { json } from "d3-fetch";
+
         let svg;
         let gx;
         let gy;
@@ -21,6 +23,7 @@
         let counties = [];
         let mesh;
 
+        const currentIndex = writable('');
         let selected;
 	var dots = 'temp';
 	let eruptionIndex = 0;
@@ -129,6 +132,7 @@
 			slicing = filteredVolcanos;
                         return yearMatches && locationMatches;
                 });
+                currentIndex.set(findCurrentIndex());
                 if (dots != 'temp') {
                         dots.remove();
                         populateScatter(svg);
@@ -257,20 +261,9 @@
                         .append('circle')
                         .attr('cx', function (d) { return scatterX(d.year); })
                         .attr('cy', function (d) { return scatterY(d.Volcano_explosive_index); })
-                        .attr('r', 2)
-                        .style('fill', 'red')
+                        .attr('r', 4 )
+                        .style('fill', function (d) {return d.Volcano_explosive_index >= 5 ? 'red' : '#ffaa20'})
                         .attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
-
-                                 
-
-
-
-
-
-
-
-
-
 
 
 
@@ -287,10 +280,16 @@
                         .append('circle')
                         .attr('cx', function (d) { return scatterX(d.year); })
                         .attr('cy', function (d) { return scatterY(d.Volcano_explosive_index); })
-                        .attr('r', 2)
-                        .style('fill', 'red')
+                        .attr('r', 4 )
+                        .style('fill', function (d) {return d.Volcano_explosive_index >= 5 ? 'red' : '#ffaa20'})
                         .attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
+                        
+        }
 
+        function calculateAverageExplosivity() {
+                const total = filteredVolcanos.reduce( (sum, volcano) => sum + parseInt(volcano.Volcano_explosive_index), 0);
+                const avg = total / filteredVolcanos.length;
+                return avg.toFixed(2);
         }
         
         function coord_proj_cx(d) {
@@ -322,7 +321,6 @@
 
         $: US_Tsunami = d3.group(US_volcanos, d => d.Tsunami_caused);
         $: US_earthquake = d3.group(US_volcanos, d => d.Earthquake_caused);
-
         // $: console.log(deadly)
 
         function explosive(groups) {
@@ -333,7 +331,23 @@
         //console.log(points)
         // debugger;
 
-        function showTooltip(d) {
+        function showTooltip(d, newX=null, newY=null) {
+                let x,y;
+                if (newX === null && newY === null) {
+                        x = event.pageX + 10;
+                        y = event.pageY + 10;
+                } else {
+                        // Get the position of the erupt circle
+                        const circle = document.querySelector('#highlighted');
+                        const circleRect = circle.getBoundingClientRect();
+                        console.log(circleRect);
+                        const circleX = parseFloat(circleRect.left) + 50;
+                        const circleY = parseFloat(circleRect.top) + 700;
+                        // Calculate the tooltip position
+                        x = circleX;
+                        y = circleY;
+                }
+                console.log("showTooltip ", x, y);
                 d3.select("#tooltip")
                   .style("visibility", "visible")
                   .html(`<b>${d.name}</b><br>Year: ${
@@ -341,8 +355,8 @@
                   }<br>Location: ${d.location}<br>Explosivity: ${
                         d.Volcano_explosive_index === "" ? "Unknown" : d.Volcano_explosive_index
                   }<br>Destruction Rank (From 1 to 15): ${d.damage_caused_rank}`)
-                  .style("left", (event.pageX + 10) + "px")
-                  .style("top", (event.pageY + 10) + "px");
+                  .style("left", x +'px' )
+                  .style("top", y + 'px' );
                 // console.log(d)
         }
 
@@ -351,18 +365,26 @@
                   .style('visibility', 'hidden')
         }
 
+        function findCurrentIndex() {
+                const total = filteredVolcanos.length;
+                if (total == 0) {
+                        return "No eruptions recorded";
+                }
+                const cur = select;
+                // If in next eruption mode, show the current progress
+                if (nextEruptionMode == 1) {
+                        return cur + " out of " + total + " eruptions";
+                } else {
+                        return "Total " + total + " eruptions";
+                }
+        }
+
   	$: mapper = select;
 
   	$: if (eruptionIndex === 0) {
     		slicing = filteredVolcanos.slice(0, mapper);
   	}
-        function calculateAverageExplosivity() {
-                const total = filteredVolcanos.reduce( (sum, volcano) => sum + parseInt(volcano.Volcano_explosive_index), 0);
-                const avg = total / filteredVolcanos.length;
-                console.log("Total:", total, "length: ", filteredVolcanos.length);
-                console.log('average explosivity: ',avg, avg.toFixed(2));
-                return avg.toFixed(2);
-        }
+        
 </script>       
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -395,28 +417,32 @@
 <button
   class="one"
   on:click={() => {
-                select += 1;
-                updateFilteredData();
-                eruptionIndex = 0;
-        }}
->
-  Get Next Eruption
-</button>
+        select += select >= filteredVolcanos.length ? 0 : 1;
+        eruptionIndex = 0;
+        nextEruptionMode = 1;
+        updateFilteredData();
+        const newVolcano = filteredVolcanos[select - 1];
+        const tooltipX = coord_proj_cx(newVolcano);
+        const tooltipY = coord_proj_cy(newVolcano);
+        showTooltip(filteredVolcanos[select - 1], tooltipX, tooltipY);
+  }}
+> Get Next Eruption </button>
+
 <button
   class="all"
   on:click={() => {
         eruptionIndex = 1;
-        updateFilteredData();
+        nextEruptionMode = 0;
         select = 0;
+        updateFilteredData();
   }}
->
-  Get All Eruptions
-</button>
+> Get All Eruptions </button>
 
 <table class="map_plot_split">
         <tr>
                 <th class="map_col">
-                        <div class="volcanos">  
+                        <p> {$currentIndex} </p>
+                        <div class="volcanos" id='volcanos'>  
                                 <svg viewBox="-260 10 1500 650">
                                         <!--    If all the necessary data is loaded in  -->
                                         {#if states && counties && mesh}
@@ -425,7 +451,6 @@
                                                                 <path d={path(feature)} 
                                                                  on:mouseover={() => selected = feature} 
                                                                  class="state" 
-                                                                 in:draw={{ delay: i * 50, duration: 500 }} 
                                                                  />
                                                         {/each}
                                                 </g>
@@ -444,25 +469,22 @@
                                                                  role="button"
                                                                  order={`${d.year}`}
                                                                  aria-label={`Volcano ${d.name}, Year: ${d.year}, Location: ${d.location}`}
-                                                                 on:mouseover={
-                                                                        showTooltip(d)
-                                                                 }
-                                                                 on:mouseleave={
-                                                                        hideTooltip(d)
-                                                                 }
+                                                                 on:mouseover={() => showTooltip(d)}
+                                                                 on:mouseleave={() => hideTooltip(d)}
                                                                 />
 							{#if i + 1 === select}
                 						<circle
-                  						class="erupt"
-                  						cx={coord_proj_cx(d)}
-                 						cy={coord_proj_cy(d)}
-                  						r={(4*(d.Volcano_explosive_index)+4)/2}
-                  						fill='magenta'
+                                                                 class="erupt"
+                                                                 id='highlighted'
+                                                                 cx={coord_proj_cx(d)}
+                                                                 cy={coord_proj_cy(d)}
+                                                                 r={(4*(d.Volcano_explosive_index)+4)/2}
+                                                                 fill='magenta'
                 						/>
                 					{/if}
                                                 {/each}
 
-                                                <circle cx="950" cy="500" r="45" fill="orange" opacity={0.6} />
+                                                <circle cx="950" cy="500" r="30" fill="orange" opacity={0.6} />
                                                 <text x="1000" y="500" font-size="20px"> Explosivity less than 5 </text>
                                                 <circle cx="950" cy="600" r="45" fill="red" opacity={0.6} />
                                                 <text x="1000" y="600" font-size="20px"> Explosivity greater </text>
@@ -470,23 +492,6 @@
                                         {/if}
                                 </svg>
                         
-                                <!-- <svg
-                                        {width}
-                                        {height}
-                                        viewBox="-120 -250 {width} {height}"
-                                        style:max-width="100%"
-                                        style:height="auto"
-                                        style:display="block"
-                                        style:margin="auto"
-                                        style:max-height="100%"
-                                        >   
-                        
-                                        <path d={path_globe(outline)} fill="#12dbff"/>
-                                        <path d={path_globe(graticule)} stroke="black" fill="none"/>
-                                        <path d={path_globe(land)} fill="green"/>
-                                        <path d={path_globe(borders)} fill="none" stroke="black" />
-                                        <path d={path_globe(outline)} fill="none" stroke="black" />
-                                </svg> -->
                         </div>
                 </th>
                 <th class="plot_col">
