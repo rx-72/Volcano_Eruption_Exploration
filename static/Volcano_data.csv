@@ -1,0 +1,436 @@
+,year,month,day,name,location,country,elevation,type,status,total_deaths,total_deaths_description,total_injuries_description,total_damage_description,total_houses_destroyed_description,Tsunami caused?,Earthquake caused?,Volcano Explosive Index,longitude,latitude,total
+19,-4360,,,Macauley Island,Kermadec Is,New Zealand,238,Caldera,Holocene,,,,,,no,no,6,-178.47,-30.2,3
+1,-4350,,,Kikai,Ryukyu Is,Japan,717,Caldera,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,7,130.28,30.78,10
+12,-4050,,,Masaya,Nicaragua,Nicaragua,635,Caldera,Historical,,,,,,no,no,6,-86.161,11.984,3
+2,-4000,,,Pago,New Britain-SW Pac,Papua New Guinea,742,Caldera,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,6,150.52,-5.58,8
+14,-3580,,,Taal,Luzon-Philippines,Philippines,400,Stratovolcano,Historical,,,,,,no,no,6,120.993,14.002,3
+21,-2420,,,Vesuvius,Italy,Italy,1281,Complex volcano,Historical,,,,,,no,no,5,14.426,40.821,3
+13,-2040,,,Long Island,New Guinea-NE of,Papua New Guinea,1280,Complex volcano,Historical,,,,,,no,no,6,147.12,-5.358,3
+15,-1900,,,Black Peak,Alaska Peninsula,United States,1032,Stratovolcano,Radiocarbon,,,,,,no,no,6,-158.8,56.53,3
+7,-1890,,,"Hudson, Cerro",Chile-S,Chile,1905,Stratovolcano,Historical,,,,,,no,no,6,-72.97,-45.9,3
+17,-1860,,,St. Helens,US-Washington,United States,2549,Stratovolcano,Historical,,,,,,no,no,6,-122.18,46.2,3
+20,-1750,,,Veniaminof,Alaska Peninsula,United States,2507,Stratovolcano,Historical,,,,,,no,no,6,-159.38,56.17,3
+11,-1645,,,Aniakchak,Alaska Peninsula,United States,1341,Caldera,Historical,,,,,,no,no,6,-158.17,56.88,3
+0,-1610,,,Santorini,Greece,Greece,329,Shield volcano,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),,yes,yes,7,25.396,36.404,10
+8,-1550,,,Redoubt,Alaska-SW,United States,3108,Stratovolcano,Historical,,,,,,no,no,0,-152.75,60.48,3
+16,-1460,,,Taupo,New Zealand,New Zealand,760,Caldera,Radiocarbon,,,,,,no,no,6,176.0,-38.82,3
+9,-1050,,,Pinatubo,Luzon-Philippines,Philippines,1486,Stratovolcano,Historical,,,,,,no,no,6,120.35,15.13,3
+4,-1010,,,Tungurahua,Ecuador,Ecuador,5023,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,5,-78.442,-1.467,6
+6,-455,,,Cotopaxi,Ecuador,Ecuador,5911,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,4,-78.436,-0.677,4
+22,-250,,,Raoul Island,Kermadec Is,New Zealand,516,Stratovolcano,Historical,,,,,,no,no,6,-177.92,-29.27,3
+3,-150,,,St. Andrew Strait,Admiralty Is-SW Paci,Papua New Guinea,270,Complex volcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,0,147.35,-2.38,6
+5,-141,,,Etna,Italy,Italy,3350,Stratovolcano,Historical,40.0,Few (~1 to 50 deaths),,,,no,no,0,15.004,37.734,4
+10,-100,,,Okmok,Aleutian Is,United States,1073,Shield volcano,Historical,,,,,,no,no,6,-168.13,53.42,3
+18,-50,,,Apoyeque,Nicaragua,Nicaragua,518,Pyroclastic shield,Radiocarbon,,,,,,no,no,6,-86.342,12.242,3
+34,50,,,Ambrym,Vanuatu-SW Pacific,Vanuatu,1334,Pyroclastic shield,Historical,,,,,,no,no,6,168.12,-16.25,3
+35,230,,,Taupo,New Zealand,New Zealand,760,Caldera,Radiocarbon,,,,,,no,no,6,176.0,-38.82,3
+29,240,,,Ksudach,Kamchatka,Russia,1079,Stratovolcano,Historical,,,,,,no,no,6,157.53,51.8,3
+104,416,,,Krakatau,Indonesia,Indonesia,813,Caldera,Historical,,Many (~101 to 1000 deaths),,EXTREME (~$25 million or more),,yes,no,0,105.423,-6.102,10
+82,450,,,Ilopango,El Salvador,El Salvador,450,Caldera,Historical,30000.0,Very Many (~1001 or more deaths),,,,no,no,6,-89.053,13.672,7
+93,500,,,"Arhab, Harra of",Arabia-S,Yemen,3100,Volcanic field,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,44.08,15.63,7
+40,590,,,San Salvador,El Salvador,El Salvador,1893,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,0,-89.286,13.736,4
+44,640,,,"Uwayrid, Harrat",Arabia-W,Saudi Arabia,1900,Volcanic field,Anthropology,,Few (~1 to 50 deaths),,,,no,no,2,37.25,27.08,4
+30,653,,,Dakataua,New Britain-SW Pac,Papua New Guinea,400,Caldera,Anthropology,,,,,,no,no,6,150.108,-5.056,3
+24,683,,,Rabaul,New Britain-SW Pac,Papua New Guinea,688,Pyroclastic shield,Historical,,,,,,no,no,6,152.203,-4.271,3
+33,710,,,Pago,New Britain-SW Pac,Papua New Guinea,742,Caldera,Historical,,,,,,no,no,6,150.52,-5.58,3
+36,847,,,Bona-Churchill,Alaska-E,United States,5005,Stratovolcano,Radiocarbon,,,,,,no,no,6,-141.75,61.38,3
+37,930,,,Ceboruco,Mexico,Mexico,2280,Stratovolcano,Historical,,,,,,no,no,6,-104.508,21.125,3
+32,1000,,,Changbaishan,China-E,North Korea,2744,Stratovolcano,Historical,,,,,,no,no,7,128.08,41.98,3
+97,1104,10,15,Hekla,Iceland-S,Iceland,1491,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,5,-19.7,63.98,7
+96,1151,,,Krisuvik,Iceland-SW,Iceland,379,Crater rows,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,1,-22.1,63.93,7
+111,1169,2,4,Etna,Italy,Italy,3350,Stratovolcano,Historical,16000.0,Very Many (~1001 or more deaths),,EXTREME (~$25 million or more),,yes,yes,0,15.004,37.734,11
+26,1250,,,Fentale,Africa-NE,Ethiopia,2007,Stratovolcano,Historical,,,,,,no,no,0,39.93,8.975,3
+27,1280,,,Quilotoa,Ecuador,Ecuador,3914,Caldera,Radiocarbon,,,,,,no,no,6,-78.9,-0.85,3
+39,1302,,,Ischia,Italy,Italy,789,Complex volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,0,13.897,40.73,4
+59,1331,12,,Aso,Kyushu-Japan,Japan,1592,Caldera,Historical,,Few (~1 to 50 deaths),,,,no,no,2,131.1,32.88,4
+69,1362,6,5,Oraefajokull,Iceland-SE,Iceland,2119,Stratovolcano,Historical,220.0,Many (~101 to 1000 deaths),,,,no,no,5,-16.65,64.0,6
+61,1375,,,"Chichon, El",Mexico,Mexico,1150,Tuff cone,Historical,,Some (~51 to 100 deaths),,,,no,no,5,-93.228,17.36,5
+66,1410,3,5,Nasu,Honshu-Japan,Japan,1917,Stratovolcano,Historical,180.0,Many (~101 to 1000 deaths),,,,no,no,3,139.97,37.12,6
+63,1430,,,Kuwae,Vanuatu-SW Pacific,Vanuatu,-2,Caldera,Historical,,Many (~101 to 1000 deaths),,,,no,no,0,168.536,-16.829,6
+91,1500,,,Katla,Iceland-S,Iceland,1512,Subglacial volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,4,-19.05,63.63,7
+56,1538,9,29,Campi Flegrei,Italy,Italy,458,Caldera,Historical,24.0,Few (~1 to 50 deaths),,,,no,no,3,14.139,40.827,4
+28,1540,,,Augustine,Alaska-SW,United States,1252,Lava dome,Historical,,,,,,yes,no,4,-153.42,59.37,3
+57,1550,11,,Dukono,Halmahera-Indonesia,Indonesia,1185,Complex volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,127.88,1.6800000000000002,4
+83,1565,8,,Pacaya,Guatemala,Guatemala,2552,Complex volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,yes,3,-90.601,14.381,7
+73,1566,10,31,Kirishima,Kyushu-Japan,Japan,1700,Shield volcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,3,130.87,31.93,6
+76,1568,,,Savo,Solomon Is-SW Pacifi,Solomon Is.,510,Stratovolcano,Historical,1001.0,Very Many (~1001 or more deaths),,,,no,no,3,159.82,-9.13,7
+72,1570,,,Mombacho,Nicaragua,Nicaragua,1344,Stratovolcano,Holocene,400.0,Many (~101 to 1000 deaths),,,,no,no,0,-85.968,11.826,6
+31,1580,,,Billy Mitchell,Bougainville-SW Paci,Papua New Guinea,1544,Pyroclastic shield,Radiocarbon,,,,,,no,no,6,155.225,-6.092,3
+87,1586,,,Kelut,Java,Indonesia,1731,Stratovolcano,Historical,10000.0,Very Many (~1001 or more deaths),,,,no,no,5,112.308,-7.93,7
+65,1590,1,15,Colima,Mexico,Mexico,3850,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,3,-103.62,19.514,6
+64,1595,3,12,Ruiz,Colombia,Colombia,5321,Stratovolcano,Historical,636.0,Many (~101 to 1000 deaths),,,,no,no,4,-75.322,4.895,6
+77,1600,2,19,Huaynaputina,Peru,Peru,4850,Stratovolcano,Historical,1500.0,Very Many (~1001 or more deaths),,,,no,yes,6,-70.85,-16.608,7
+25,1606,1,23,Hachijo-jima,Izu Is-Japan,Japan,854,Stratovolcano,Historical,,,,,,yes,no,2,139.77,33.13,3
+99,1608,7,18,Gamalama,Halmahera-Indonesia,Indonesia,1715,Stratovolcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,yes,no,3,127.325,0.8,8
+60,1609,,,Tengchong,China-S,China,2865,Pyroclastic cone,Historical,,Few (~1 to 50 deaths),,,,no,no,0,98.47,25.32,4
+85,1615,3,,Banda Api,Banda Sea,Pacific Ocean,640,Caldera,Historical,,,,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,no,3,129.871,-4.525,7
+70,1630,9,3,Furnas,Azores,Portugal,805,Stratovolcano,Historical,200.0,Many (~101 to 1000 deaths),,,,no,no,4,-25.32,37.77,6
+110,1631,12,16,Vesuvius,Italy,Italy,1281,Complex volcano,Historical,4000.0,Very Many (~1001 or more deaths),,EXTREME (~$25 million or more),Very Many (~1001 or more houses),yes,yes,5,14.426,40.821,11
+102,1631,2,14,Dama Ali,Africa-NE,Ethiopia,1068,Shield volcano,Historical,50.0,Few (~1 to 50 deaths),,MODERATE (~$1 to $5 million),,no,yes,0,41.63,11.28,8
+86,1638,,,Raung,Java,Indonesia,3332,Stratovolcano,Historical,1001.0,Very Many (~1001 or more deaths),,,,no,no,4,114.042,-8.125,7
+107,1640,7,31,Komaga-take,Hokkaido-Japan,Japan,1140,Stratovolcano,Historical,700.0,Many (~101 to 1000 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,yes,5,140.68,42.07,10
+80,1640,,,Tungurahua,Ecuador,Ecuador,5023,Stratovolcano,Historical,5000.0,Very Many (~1001 or more deaths),,,Very Many (~1001 or more houses),no,no,3,-78.442,-1.467,7
+71,1650,9,26,Santorini,Greece,Greece,329,Shield volcano,Historical,120.0,Many (~101 to 1000 deaths),,,,yes,no,4,25.396,36.404,6
+109,1660,,,Long Island,New Guinea-NE of,Papua New Guinea,1280,Complex volcano,Historical,2000.0,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,6,147.12,-5.358,11
+51,1660,2,,Teon,Banda Sea,Pacific Ocean,655,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,4,129.125,-6.92,4
+38,1663,8,16,Usu,Hokkaido-Japan,Japan,731,Stratovolcano,Historical,5.0,Few (~1 to 50 deaths),,,,no,no,5,140.83,42.53,4
+101,1664,,,Iwo-Tori-shima,Ryukyu Is,Japan,217,Complex volcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,0,128.25,27.85,8
+68,1670,,,Aoba,Vanuatu-SW Pacific,Vanuatu,1496,Shield volcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,2,167.83,-15.4,6
+84,1672,8,4,Merapi,Java,Indonesia,2947,Stratovolcano,Historical,3000.0,Very Many (~1001 or more deaths),,,,no,no,3,110.442,-7.542,7
+45,1672,4,24,Fayal,Azores,Portugal,1043,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,2,-28.73,38.6,4
+106,1673,5,20,Gamkonora,Halmahera-Indonesia,Indonesia,1635,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,5,127.52,1.375,10
+54,1677,11,22,La Palma,Canary Is,Spain,2426,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,2,-17.83,28.58,4
+23,1679,9,21,Zukur,Red Sea,Yemen,624,Shield volcano,Holocene,,,,,,no,yes,0,42.75,14.02,3
+49,1690,,,Guntur,Java,Indonesia,2249,Complex volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,107.83,-7.13,4
+62,1692,6,4,Serua,Banda Sea,Pacific Ocean,641,Stratovolcano,Historical,,Some (~51 to 100 deaths),,,,no,no,4,130.0,-6.3,5
+46,1698,,,Cereme,Java,Indonesia,3078,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,108.4,-6.892,4
+90,1706,5,5,Tenerife,Canary Is,Spain,3715,Stratovolcano,Historical,,,,SEVERE (~>$5 to $24 million),,yes,no,2,-16.641,28.271,7
+103,1707,12,16,Fuji,Honshu-Japan,Japan,3776,Stratovolcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,yes,4,138.73,35.35,8
+89,1711,12,11,Awu,Sangihe Is-Indonesia,Indonesia,1320,Stratovolcano,Historical,3000.0,Very Many (~1001 or more deaths),,,,no,no,3,125.5,3.67,7
+74,1717,8,27,Fuego,Guatemala,Guatemala,3763,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,3,-90.88,14.473,7
+58,1718,2,1,Pico,Azores,Portugal,2351,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,-28.4,38.47,4
+81,1729,6,30,Krafla,Iceland-NE,Iceland,650,Caldera,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,2,-16.78,65.73,7
+94,1729,2,1,Bardarbunga,Iceland-NE,Iceland,2000,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,1,-17.53,64.63,7
+50,1730,,,Tseax River Cone,Canada,Canada,609,Pyroclastic cone,Radiocarbon,,Few (~1 to 50 deaths),,,,no,no,0,-128.9,55.12,4
+55,1730,9,1,Lanzarote,Canary Is,Spain,670,Fissure vent,Historical,,Few (~1 to 50 deaths),,,,no,no,2,-13.63,29.03,4
+112,1741,8,23,Oshima-Oshima,Hokkaido-Japan,Japan,737,Stratovolcano,Historical,2000.0,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,4,139.37,41.5,11
+100,1754,5,13,Taal,Luzon-Philippines,Philippines,400,Stratovolcano,Historical,12.0,Few (~1 to 50 deaths),,EXTREME (~$25 million or more),Very Many (~1001 or more houses),yes,yes,4,120.993,14.002,8
+108,1757,7,9,San Jorge,Azores,Portugal,1053,Fissure vent,Historical,1053.0,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Very Many (~1001 or more houses),no,yes,0,-28.08,38.65,11
+78,1760,,,Makian,Halmahera-Indonesia,Indonesia,1357,Stratovolcano,Historical,2000.0,Very Many (~1001 or more deaths),,,,no,no,4,127.4,0.32,7
+41,1762,,,Kliuchevskoi,Kamchatka,Russia,4835,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,160.638,56.057,4
+48,1766,7,20,Mayon,Luzon-Philippines,Philippines,2462,Stratovolcano,Historical,49.0,Few (~1 to 50 deaths),,,,no,no,3,123.685,13.257,4
+105,1768,4,4,Cotopaxi,Ecuador,Ecuador,5911,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),,no,no,4,-78.436,-0.677,10
+75,1772,8,12,Papandayan,Java,Indonesia,2665,Stratovolcano,Historical,2957.0,Very Many (~1001 or more deaths),,,Many (~101 to 1000 houses),no,no,3,107.73,-7.32,7
+47,1775,,,Lokon-Empung,Sulawesi-Indonesia,Indonesia,1580,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,124.792,1.358,4
+43,1778,,,Raikoke,Kuril Is,Russia,551,Stratovolcano,Historical,15.0,Few (~1 to 50 deaths),,,,no,no,4,153.25,48.292,4
+98,1781,4,11,Sakura-jima,Kyushu-Japan,Japan,1117,Stratovolcano,Historical,38.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,yes,no,4,130.67,31.58,8
+92,1783,8,5,Asama,Honshu-Japan,Japan,2560,Complex volcano,Historical,1491.0,Very Many (~1001 or more deaths),,,,no,no,4,138.53,36.4,7
+88,1784,4,,Grimsvotn,Iceland-NE,Iceland,1725,Caldera,Historical,9350.0,Very Many (~1001 or more deaths),,,,no,no,4,-17.33,64.42,7
+53,1784,,,Hualalai,Hawaiian Is,United States,2523,Shield volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,0,-155.87,19.692,4
+95,1784,7,,Sabancaya,Peru,Peru,5967,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,-71.85,-15.78,7
+67,1785,4,18,Aoga-shima,Izu Is-Japan,Japan,423,Stratovolcano,Historical,135.0,Many (~101 to 1000 deaths),,,,no,no,3,139.77,32.45,6
+52,1786,,,Dieng Volc Complex,Java,Indonesia,2565,Complex volcano,Historical,38.0,Few (~1 to 50 deaths),,,Some (~51 to 100 houses),no,no,2,109.92,-7.2,4
+42,1789,,,Oshima,Izu Is-Japan,Japan,758,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,139.38,34.73,4
+79,1790,11,,Kilauea,Hawaiian Is,United States,1222,Shield volcano,Historical,5405.0,Very Many (~1001 or more deaths),,,,no,no,4,-155.292,19.425,7
+113,1792,5,21,Unzen,Kyushu-Japan,Japan,1500,Complex volcano,Historical,15000.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),EXTREME (~$25 million or more),Very Many (~1001 or more houses),yes,yes,2,130.3,32.75,14
+145,1800,6,24,San Jorge,Azores,Portugal,1053,Fissure vent,Historical,9.0,Few (~1 to 50 deaths),,,,no,no,1,-28.08,38.65,4
+135,1800,,,Hualalai,Hawaiian Is,United States,2523,Shield volcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,0,-155.87,19.692,4
+170,1800,10,8,Guntur,Java,Indonesia,2249,Complex volcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,0,107.83,-7.13,6
+204,1800,,,Kieyo,Africa-E,Tanzania,2175,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),,no,no,2,33.78,-9.23,10
+166,1800,,,St. Helens,US-Washington,United States,2549,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,5,-122.18,46.2,6
+132,1801,7,,Chokai,Honshu-Japan,Japan,2237,Stratovolcano,Historical,8.0,Few (~1 to 50 deaths),,,,no,no,2,140.03,39.08,4
+143,1803,11,7,Asama,Honshu-Japan,Japan,2560,Complex volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,138.53,36.4,4
+167,1804,,,Shikotsu,Hokkaido-Japan,Japan,1320,Caldera,Historical,,Many (~101 to 1000 deaths),,,,no,no,3,141.33,42.7,6
+156,1812,4,27,Soufriere St. Vincent,W Indies,St. Vincent & the Grenadines,1220,Stratovolcano,Historical,56.0,Some (~51 to 100 deaths),,,,no,no,4,-61.18,13.33,5
+206,1814,2,1,Mayon,Luzon-Philippines,Philippines,2462,Stratovolcano,Historical,1200.0,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,4,123.685,13.257,11
+213,1815,4,10,Tambora,Lesser Sunda Is,Indonesia,2850,Stratovolcano,Historical,60000.0,Very Many (~1001 or more deaths),Very Many (~1001 or more deaths),EXTREME (~$25 million or more),Very Many (~1001 or more houses),yes,no,7,118.0,-8.25,15
+155,1817,1,24,Ijen,Java,Indonesia,2799,Stratovolcano,Historical,,Some (~51 to 100 deaths),,,Some (~51 to 100 houses),no,no,2,114.242,-8.058,5
+147,1817,,,Raung,Java,Indonesia,3332,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,4,114.042,-8.125,4
+150,1818,2,5,Colima,Mexico,Mexico,3850,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,4,-103.62,19.514,4
+114,1819,,,Asuncion,Mariana Is-C Pacific,United States,857,Stratovolcano,Historical,,,,,,yes,no,0,145.4,19.67,3
+127,1820,3,1,Westdahl,Aleutian Is,United States,1654,Stratovolcano,Historical,,,,,,yes,yes,2,-164.65,54.52,3
+209,1822,10,8,Galunggung,Java,Indonesia,2168,Stratovolcano,Historical,4011.0,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,5,108.05,-7.25,11
+207,1822,12,27,Merapi,Java,Indonesia,2947,Stratovolcano,Historical,100.0,Some (~51 to 100 deaths),Some (~51 to 100 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,3,110.442,-7.542,11
+169,1822,3,9,Usu,Hokkaido-Japan,Japan,731,Stratovolcano,Historical,50.0,Few (~1 to 50 deaths),Some (~51 to 100 deaths),,Some (~51 to 100 houses),no,no,4,140.83,42.53,6
+163,1825,,,Balbi,Bougainville-SW Paci,Papua New Guinea,2715,Stratovolcano,Holocene,,Many (~101 to 1000 deaths),,,,no,no,0,154.98,-5.83,6
+172,1826,10,,Aso,Kyushu-Japan,Japan,1592,Caldera,Historical,,Many (~101 to 1000 deaths),,,,no,no,2,131.1,32.88,6
+205,1826,10,11,Kelut,Java,Indonesia,1731,Stratovolcano,Historical,,Few (~1 to 50 deaths),Some (~51 to 100 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,3,112.308,-7.93,10
+160,1826,10,11,Dieng Volc Complex,Java,Indonesia,2565,Complex volcano,Historical,,Some (~51 to 100 deaths),,,,no,no,2,109.92,-7.2,5
+121,1827,6,27,Avachinsky,Kamchatka,Russia,2741,Stratovolcano,Historical,,,,,,yes,yes,2,158.83,53.255,3
+174,1833,11,24,Kaba,Sumatra,Indonesia,1952,Stratovolcano,Historical,126.0,Many (~101 to 1000 deaths),,,,no,no,2,102.62,-3.52,6
+133,1835,1,20,Cosiguina,Nicaragua,Nicaragua,872,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,5,-87.57,12.98,4
+199,1835,11,1,Banda Api,Banda Sea,Pacific Ocean,640,Caldera,Historical,,Many (~101 to 1000 deaths),,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,yes,0,129.871,-4.525,10
+116,1837,9,,Peuet Sague,Sumatra,Indonesia,2801,Complex volcano,Historical,,,,,,yes,yes,0,96.329,4.914,3
+126,1839,2,12,Unnamed,Chile-Is,Chile,-642,Submarine volcano,Uncertain,,,,,,yes,no,2,-76.83,-33.62,3
+191,1840,5,30,Kilauea,Hawaiian Is,United States,1222,Shield volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,yes,no,0,-155.292,19.425,7
+178,1840,,,Savo,Solomon Is-SW Pacifi,Solomon Is.,510,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,3,159.82,-9.13,6
+181,1840,7,2,Ararat,Turkey,Turkey,5165,Stratovolcano,Holocene,1900.0,Very Many (~1001 or more deaths),,,,no,no,3,44.28,39.7,7
+188,1841,4,,Kuchinoerabu-jima,Ryukyu Is,Japan,649,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,no,2,130.22,30.43,7
+182,1843,11,17,Etna,Italy,Italy,3350,Stratovolcano,Historical,56.0,Some (~51 to 100 deaths),Some (~51 to 100 deaths),,,no,no,2,15.004,37.734,7
+123,1843,2,17,Soufriere Guadeloupe,W Indies,Guadeloupe,1467,Stratovolcano,Historical,,,,,,yes,no,0,-61.67,16.05,3
+128,1843,2,8,Liamuiga,W Indies,St. Kitts & Nevis,1156,Stratovolcano,Radiocarbon,,,,,,yes,no,0,-62.8,17.37,3
+203,1845,2,8,Soputan,Sulawesi-Indonesia,Indonesia,1784,Stratovolcano,Historical,118.0,Many (~101 to 1000 deaths),,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),yes,yes,2,124.725,1.108,10
+164,1845,2,19,Ruiz,Colombia,Colombia,5321,Stratovolcano,Historical,1000.0,Many (~101 to 1000 deaths),,,,no,no,3,-75.322,4.895,6
+179,1845,9,2,Hekla,Iceland-S,Iceland,1491,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,4,-19.7,63.98,7
+171,1846,11,18,E-san,Hokkaido-Japan,Japan,618,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,1,141.17,41.8,6
+157,1846,5,7,Taupo,New Zealand,New Zealand,760,Caldera,Radiocarbon,63.0,Some (~51 to 100 deaths),,,,no,no,0,176.0,-38.82,5
+141,1846,5,27,Tangkubanparahu,Java,Indonesia,2084,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,107.6,-6.77,4
+134,1847,4,9,Fogo,Cape Verde Is,Cape Verde,2829,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,-24.35,14.95,4
+175,1850,,,Rabaul,New Britain-SW Pac,Papua New Guinea,688,Pyroclastic shield,Historical,,Many (~101 to 1000 deaths),,,,no,no,2,152.203,-4.271,6
+120,1854,6,27,Alaid,Kuril Is,Russia,2339,Stratovolcano,Historical,,,,,,yes,no,3,155.55,50.858,3
+185,1854,2,18,Shiveluch,Kamchatka,Russia,3283,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,5,161.36,56.653,7
+211,1856,3,2,Awu,Sangihe Is-Indonesia,Indonesia,1320,Stratovolcano,Historical,2806.0,Very Many (~1001 or more deaths),Some (~51 to 100 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,yes,3,125.5,3.67,13
+140,1856,9,25,Komaga-take,Hokkaido-Japan,Japan,1140,Stratovolcano,Historical,20.0,Few (~1 to 50 deaths),,,Many (~101 to 1000 houses),no,no,4,140.68,42.07,4
+124,1856,7,26,Shishaldin,Aleutian Is,United States,2857,Stratovolcano,Historical,,,,,,yes,no,0,-163.97,54.75,3
+119,1857,4,17,Umboi,New Guinea-NE of,Papua New Guinea,1548,Complex volcano,Holocene,,,,,,yes,yes,0,147.875,-5.589,3
+176,1858,7,3,Tate-yama,Honshu-Japan,Japan,2621,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,0,137.6,36.57,6
+186,1860,8,18,Fuego,Guatemala,Guatemala,3763,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,2,-90.88,14.473,7
+187,1861,5,,Grimsvotn,Iceland-NE,Iceland,1725,Caldera,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,2,-17.33,64.42,7
+202,1861,5,7,Dubbi,Africa-NE,Eritrea,1625,Stratovolcano,Historical,106.0,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,yes,3,41.808,13.58,10
+189,1861,12,29,Makian,Halmahera-Indonesia,Indonesia,1357,Stratovolcano,Historical,326.0,Many (~101 to 1000 deaths),Few (~1 to 50 deaths),,Many (~101 to 1000 houses),no,no,4,127.4,0.32,7
+154,1866,2,20,Santorini,Greece,Greece,329,Shield volcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,25.396,36.404,5
+118,1866,9,12,Ofu-Olosega,Samoa-SW Pacific,United States,639,Shield volcano,Historical,,,,,,yes,no,2,-169.618,-14.175,3
+129,1867,10,21,Zao,Honshu-Japan,Japan,1841,Complex volcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,2,140.45,38.15,4
+197,1868,4,3,Mauna Loa,Hawaiian Is,United States,4170,Shield volcano,Historical,77.0,Some (~51 to 100 deaths),,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),yes,yes,2,-155.608,19.475,9
+136,1869,8,,Lamongan,Java,Indonesia,1651,Stratovolcano,Historical,8.0,Few (~1 to 50 deaths),,,,no,no,2,113.342,-8.0,4
+144,1869,7,7,Lewotobi,Lesser Sunda Is,Indonesia,1703,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,122.775,-8.53,4
+200,1870,,,Aoba,Vanuatu-SW Pacific,Vanuatu,1496,Shield volcano,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,2,167.83,-15.4,10
+146,1870,,,Iliwerung,Lesser Sunda Is,Indonesia,1018,Complex volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,123.59,-8.54,4
+198,1871,3,3,Ruang,Sangihe Is-Indonesia,Indonesia,725,Stratovolcano,Historical,400.0,Many (~101 to 1000 deaths),,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),yes,no,2,125.425,2.2800000000000002,10
+159,1871,8,7,Gamalama,Halmahera-Indonesia,Indonesia,1715,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,127.325,0.8,5
+195,1871,4,30,Camiguin,Mindanao-Philippines,Philippines,1332,Stratovolcano,Historical,,Few (~1 to 50 deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,yes,2,124.673,9.203,8
+158,1872,4,24,Vesuvius,Italy,Italy,1281,Complex volcano,Historical,9.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,14.426,40.821,5
+162,1872,,,Sinarka,Kuril Is,Russia,934,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,4,154.175,48.875,6
+130,1873,1,16,Ragang,Mindanao-Philippines,Philippines,2815,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,124.5,7.67,4
+142,1874,7,19,Taal,Luzon-Philippines,Philippines,400,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,120.993,14.002,4
+151,1874,7,3,Miyake-jima,Izu Is-Japan,Japan,815,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,3,139.53,34.08,4
+180,1875,3,29,Askja,Iceland-NE,Iceland,1516,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,5,-16.75,65.03,7
+173,1877,6,25,Cotopaxi,Ecuador,Ecuador,5911,Stratovolcano,Historical,340.0,Many (~101 to 1000 deaths),,,,no,no,4,-78.436,-0.677,6
+184,1878,1,10,Yasur,Vanuatu-SW Pacific,Vanuatu,361,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,yes,no,3,169.425,-19.52,7
+122,1878,8,29,Okmok,Aleutian Is,United States,1073,Shield volcano,Historical,,,,,,yes,yes,2,-168.13,53.42,3
+125,1879,2,4,Stromboli,Italy,Italy,926,Stratovolcano,Historical,,,,,,yes,no,2,15.213,38.789,3
+193,1883,10,6,Augustine,Alaska-SW,United States,1252,Lava dome,Historical,8.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,4,-153.42,59.37,8
+201,1883,3,,Karthala,Indian O-W,Comoros,2361,Shield volcano,Historical,,Many (~101 to 1000 deaths),,SEVERE (~>$5 to $24 million),,no,no,2,43.38,-11.75,10
+153,1883,12,,Bagana,Bougainville-SW Paci,Papua New Guinea,1750,Lava cone,Historical,,Some (~51 to 100 deaths),,,,no,no,3,155.195,-6.14,5
+212,1883,8,27,Krakatau,Indonesia,Indonesia,813,Caldera,Historical,36417.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,6,105.423,-6.102,14
+196,1885,5,25,Purace,Colombia,Colombia,4650,Stratovolcano,Historical,,Some (~51 to 100 deaths),,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,yes,3,-76.4,2.32,9
+149,1886,8,31,Niuafo'ou,Tonga-SW Pacific,Tonga,260,Shield volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,4,-175.63,-15.6,4
+137,1886,1,11,Tungurahua,Ecuador,Ecuador,5023,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,4,-78.442,-1.467,4
+165,1886,6,10,Okataina,New Zealand,New Zealand,1111,Lava dome,Historical,153.0,Many (~101 to 1000 deaths),,,,no,no,2,176.5,-38.12,6
+210,1888,7,15,Bandai,Honshu-Japan,Japan,1819,Stratovolcano,Historical,461.0,Many (~101 to 1000 deaths),Some (~51 to 100 deaths),MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,no,4,140.08,37.6,12
+208,1888,3,13,Ritter Island,New Guinea-NE of,Papua New Guinea,140,Stratovolcano,Historical,,Very Many (~1001 or more deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,3,148.121,-5.52,11
+117,1889,9,6,Banua Wuhu,Sangihe Is-Indonesia,Indonesia,-5,Submarine volcano,Historical,,,,,,yes,yes,2,125.491,3.138,3
+177,1890,,,Victory,New Guinea,Papua New Guinea,1925,Stratovolcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,2,149.07,-9.2,6
+115,1892,8,30,Tofua,Tonga-SW Pacific,Tonga,512,Caldera,Historical,,,,,,yes,no,2,-175.07,-19.75,3
+168,1892,5,21,Sorikmarapi,Sumatra,Indonesia,2145,Stratovolcano,Historical,180.0,Many (~101 to 1000 deaths),,,,no,no,2,99.539,0.686,6
+190,1893,1,7,Calbuco,Chile-S,Chile,2003,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,4,-72.614,-41.326,7
+131,1893,5,19,Azuma,Honshu-Japan,Japan,2024,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,140.25,37.73,4
+139,1894,10,,Ambrym,Vanuatu-SW Pacific,Vanuatu,1334,Pyroclastic shield,Historical,10.0,Few (~1 to 50 deaths),,,,no,no,3,168.12,-16.25,4
+194,1895,5,22,Semeru,Java,Indonesia,3676,Stratovolcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,2,112.92,-8.108,8
+192,1895,,,Dakataua,New Britain-SW Pac,Papua New Guinea,400,Caldera,Anthropology,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,2,150.108,-5.056,8
+138,1895,6,17,Karkar,New Guinea-NE of,Papua New Guinea,1839,Stratovolcano,Historical,21.0,Few (~1 to 50 deaths),,,,no,no,2,145.964,-4.649,4
+152,1896,3,15,Kirishima,Kyushu-Japan,Japan,1700,Shield volcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,130.87,31.93,5
+183,1897,3,26,Tinakula,Santa Cruz Is-SW Pac,Solomon Is.,851,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,2,165.8,-10.38,7
+161,1899,11,13,Dona Juana,Colombia,Colombia,4150,Stratovolcano,Historical,55.0,Some (~51 to 100 deaths),,,,no,no,4,-76.92,1.47,5
+148,1899,,,Manam,New Guinea-NE of,Papua New Guinea,1807,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,145.061,-4.1,4
+292,1900,2,16,Kirishima,Kyushu-Japan,Japan,1700,Shield volcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,130.87,31.93,5
+307,1900,7,17,Adatara,Honshu-Japan,Japan,1718,Stratovolcano,Historical,72.0,Some (~51 to 100 deaths),Few (~1 to 50 deaths),,,no,no,2,140.28,37.62,6
+226,1900,,,Tullu Moje,Africa-NE,Ethiopia,2349,Pumice cone,Anthropology,,,,,,no,no,0,39.13,8.158,3
+340,1901,8,9,Epi,Vanuatu-SW Pacific,Vanuatu,833,Stratovolcano,Historical,,Few (~1 to 50 deaths),,MODERATE (~$1 to $5 million),,yes,yes,0,168.37,-16.68,8
+362,1902,5,7,Soufriere St. Vincent,W Indies,St. Vincent & the Grenadines,1220,Stratovolcano,Historical,1680.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),,,yes,no,4,-61.18,13.33,10
+309,1902,8,7,Tori-shima,Izu Is-Japan,Japan,403,Stratovolcano,Historical,125.0,Many (~101 to 1000 deaths),,,,no,no,3,140.32,30.48,6
+319,1902,5,8,Pelee,W Indies,Martinique,1397,Stratovolcano,Historical,28000.0,Very Many (~1001 or more deaths),,,,yes,no,4,-61.17,14.82,7
+364,1902,10,25,Santa Maria,Guatemala,Guatemala,3772,Stratovolcano,Historical,10000.0,Very Many (~1001 or more deaths),,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,no,6,-91.552,14.756,11
+345,1906,4,4,Vesuvius,Italy,Italy,1281,Complex volcano,Historical,350.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),,,yes,no,3,14.426,40.821,9
+290,1907,9,28,Lewotobi,Lesser Sunda Is,Indonesia,1703,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,122.775,-8.53,5
+324,1907,10,6,Savai'i,Samoa-SW Pacific,Samoa,1858,Shield volcano,Historical,,,,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,0,-172.525,-13.612,7
+221,1907,7,,Unnamed,Tonga-SW Pacific,Tonga,-500,Submarine volcano,Historical,,,,,,yes,yes,0,-175.65,-21.38,3
+246,1907,8,4,Alayta,Africa-NE,Ethiopia,1501,Shield volcano,Historical,,Few (~1 to 50 deaths),,,,no,no,2,40.57,12.88,4
+363,1909,9,,Semeru,Java,Indonesia,3676,Stratovolcano,Historical,221.0,Many (~101 to 1000 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,2,112.92,-8.108,10
+218,1909,4,28,"Cameroon, Mt.",Africa-W,Cameroon,4095,Stratovolcano,Historical,,,,,,no,yes,2,9.17,4.203,3
+231,1910,3,20,Taupo,New Zealand,New Zealand,760,Caldera,Radiocarbon,1.0,Few (~1 to 50 deaths),,,,no,no,0,176.0,-38.82,4
+374,1911,1,30,Taal,Luzon-Philippines,Philippines,400,Stratovolcano,Historical,1335.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,yes,3,120.993,14.002,14
+215,1911,11,3,Piparo,Trinidad,Trinidad,140,Mud volcano,Historical,,,,,,yes,no,0,-61.0,10.0,3
+306,1911,8,15,Asama,Honshu-Japan,Japan,2560,Complex volcano,Historical,,Many (~101 to 1000 deaths),,,,no,no,2,138.53,36.4,6
+273,1912,9,6,Novarupta,Alaska Peninsula,United States,841,Caldera,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,6,-155.16,58.27,4
+370,1913,3,14,Awu,Sangihe Is-Indonesia,Indonesia,1320,Stratovolcano,Historical,138.0,Many (~101 to 1000 deaths),Some (~51 to 100 deaths),MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),yes,yes,2,125.5,3.67,12
+339,1913,12,6,Ambrym,Vanuatu-SW Pacific,Vanuatu,1334,Pyroclastic shield,Historical,21.0,Few (~1 to 50 deaths),,SEVERE (~>$5 to $24 million),,no,no,3,168.12,-16.25,8
+259,1913,1,20,Colima,Mexico,Mexico,3850,Stratovolcano,Historical,13.0,Few (~1 to 50 deaths),,,,no,no,4,-103.62,19.514,4
+371,1914,1,12,Sakura-jima,Kyushu-Japan,Japan,1117,Stratovolcano,Historical,63.0,Some (~51 to 100 deaths),Many (~101 to 1000 deaths),SEVERE (~>$5 to $24 million),Very Many (~1001 or more houses),yes,yes,4,130.67,31.58,12
+295,1914,,,Aoba,Vanuatu-SW Pacific,Vanuatu,1496,Shield volcano,Historical,100.0,Some (~51 to 100 deaths),,,,no,no,0,167.83,-15.4,5
+253,1914,1,18,Pago,New Britain-SW Pac,Papua New Guinea,742,Caldera,Historical,,Few (~1 to 50 deaths),,,,no,no,3,150.52,-5.58,4
+268,1914,9,10,White Island,New Zealand,New Zealand,321,Stratovolcano,Historical,11.0,Few (~1 to 50 deaths),,,,no,no,0,177.18,-37.52,4
+228,1917,4,,Calbuco,Chile-S,Chile,2003,Stratovolcano,Historical,,,,,,no,no,3,-72.614,-41.326,3
+305,1917,6,7,San Salvador,El Salvador,El Salvador,1893,Stratovolcano,Historical,325.0,Many (~101 to 1000 deaths),,,,no,yes,3,-89.286,13.736,6
+282,1917,4,1,Okataina,New Zealand,New Zealand,1111,Lava dome,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,1,176.5,-38.12,5
+312,1918,10,12,Katla,Iceland-S,Iceland,1512,Subglacial volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,4,-19.05,63.63,7
+317,1919,4,3,Banua Wuhu,Sangihe Is-Indonesia,Indonesia,-5,Submarine volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,0,125.491,3.138,7
+365,1919,5,22,Stromboli,Italy,Italy,926,Stratovolcano,Historical,4.0,Few (~1 to 50 deaths),Many (~101 to 1000 deaths),LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,3,15.213,38.789,11
+217,1919,9,29,Mauna Loa,Hawaiian Is,United States,4170,Shield volcano,Historical,,,,,,yes,no,0,-155.608,19.475,3
+247,1920,10,29,Izalco,El Salvador,El Salvador,1950,Stratovolcano,Historical,,Few (~1 to 50 deaths),,,,no,no,3,-89.633,13.813,4
+264,1921,11,26,Nasu,Honshu-Japan,Japan,1917,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,139.97,37.12,4
+316,1923,3,2,"Cendres, Ile des",SE Asia,Vietnam,-20,Submarine volcanoes,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,yes,yes,2,109.014,10.158,7
+261,1923,3,11,Papandayan,Java,Indonesia,2665,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,1,107.73,-7.32,4
+348,1926,5,24,Tokachi,Hokkaido-Japan,Japan,2077,Stratovolcano,Historical,144.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),,Very Many (~1001 or more houses),no,no,3,142.68,43.42,9
+250,1927,9,5,Esjufjoll,Iceland-SE,Iceland,1760,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,1,-16.65,64.27,4
+262,1928,1,23,Santorini,Greece,Greece,329,Shield volcano,Historical,48.0,Few (~1 to 50 deaths),,,,no,no,2,25.396,36.404,4
+351,1928,8,4,Paluweh,Lesser Sunda Is,Indonesia,875,Stratovolcano,Historical,226.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),,Some (~51 to 100 houses),yes,no,3,121.708,-8.32,9
+279,1929,6,17,Komaga-take,Hokkaido-Japan,Japan,1140,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,4,140.68,42.07,5
+296,1932,10,1,Kusatsu-Shirane,Honshu-Japan,Japan,2176,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,138.55,36.62,5
+294,1933,12,24,Kuchinoerabu-jima,Ryukyu Is,Japan,649,Stratovolcano,Historical,8.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,4,130.22,30.43,5
+241,1933,1,8,Kharimkotan,Kuril Is,Russia,1145,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,yes,no,3,154.508,49.12,4
+336,1933,12,25,Bulusan,Luzon-Philippines,Philippines,1565,Stratovolcano,Historical,9.0,Few (~1 to 50 deaths),,SEVERE (~>$5 to $24 million),,yes,no,2,124.05,12.77,8
+359,1937,5,29,Rabaul,New Britain-SW Pac,Papua New Guinea,688,Pyroclastic shield,Historical,507.0,Many (~101 to 1000 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,yes,4,152.203,-4.271,10
+338,1937,2,9,Llaima,Chile-C,Chile,3125,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,2,-71.729,-38.692,8
+248,1938,5,9,Bandai,Honshu-Japan,Japan,1819,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,0,140.08,37.6,4
+325,1938,1,28,Nyamuragira,Africa-C,"Congo, DRC",3058,Shield volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,yes,no,1,29.2,-1.408,7
+328,1940,7,24,"Lengai, Ol Doinyo",Africa-E,Tanzania,2890,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,2,35.902,-2.751,7
+258,1943,2,20,Michoacan-Guanajuato,Mexico,Mexico,3860,Cinder cone,Historical,103.0,Few (~1 to 50 deaths),,,,no,no,4,-102.25,19.48,4
+270,1943,4,13,"Azul, Cerro",Galapagos,Ecuador,1690,Shield volcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,3,-91.42,-0.9,4
+346,1944,12,4,Dieng Volc Complex,Java,Indonesia,2565,Complex volcano,Historical,117.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),,,no,no,2,109.92,-7.2,9
+260,1944,6,10,Cleveland,Aleutian Is,United States,1730,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,3,-169.95,52.82,4
+216,1946,11,13,Sarychev Peak,Kuril Is,Russia,1496,Stratovolcano,Historical,,,,,,yes,no,4,153.2,48.092,3
+304,1947,9,16,Akagi,Honshu-Japan,Japan,1828,Stratovolcano,Historical,699.0,Many (~101 to 1000 deaths),,,,no,no,0,139.18,36.53,6
+234,1949,5,26,Purace,Colombia,Colombia,4650,Stratovolcano,Historical,17.0,Few (~1 to 50 deaths),,,,no,no,2,-76.4,2.32,4
+352,1949,1,1,Villarrica,Chile-C,Chile,2847,Stratovolcano,Historical,54.0,Some (~51 to 100 deaths),,MODERATE (~$1 to $5 million),,no,no,3,-71.93,-39.42,9
+220,1951,,,Kavachi,Solomon Is-SW Pacifi,Solomon Is.,-20,Submarine volcano,Historical,,,,,,yes,no,2,157.95,-9.02,3
+301,1951,12,4,Camiguin,Mindanao-Philippines,Philippines,1332,Stratovolcano,Historical,500.0,Many (~101 to 1000 deaths),,,,no,no,3,124.673,9.203,6
+355,1951,1,21,Lamington,New Guinea,Papua New Guinea,1680,Stratovolcano,Historical,2942.0,Very Many (~1001 or more deaths),Some (~51 to 100 deaths),,,no,no,4,148.15,-8.95,9
+326,1951,8,3,Cosiguina,Nicaragua,Nicaragua,872,Stratovolcano,Historical,,,,SEVERE (~>$5 to $24 million),Some (~51 to 100 houses),yes,yes,0,-87.57,12.98,7
+341,1952,9,24,Myojun Knoll,Izu Is-Japan,Japan,360,Submarine volcano,Holocene,31.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,yes,no,2,139.85,32.1,8
+252,1952,,,Ambalatungan Group,Luzon-Philippines,Philippines,2329,Compound volcano,Fumarolic,12.0,Few (~1 to 50 deaths),,,,no,no,1,121.1,17.32,4
+303,1953,12,24,Ruapehu,New Zealand,New Zealand,2797,Stratovolcano,Historical,151.0,Many (~101 to 1000 deaths),,,,no,no,0,175.57,-39.28,6
+275,1953,7,26,Hakone,Honshu-Japan,Japan,1438,Complex volcano,Radiocarbon,10.0,Few (~1 to 50 deaths),,,,no,no,0,139.02,35.22,4
+322,1953,6,27,St. Andrew Strait,Admiralty Is-SW Paci,Papua New Guinea,270,Complex volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,yes,no,0,147.35,-2.38,7
+367,1953,3,23,Merapi,Java,Indonesia,2947,Stratovolcano,Historical,64.0,Some (~51 to 100 deaths),Some (~51 to 100 deaths),MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,3,110.442,-7.542,11
+308,1954,8,3,Bam,New Guinea-NE of,Papua New Guinea,685,Stratovolcano,Historical,25.0,Few (~1 to 50 deaths),Some (~51 to 100 deaths),,,no,no,2,144.85,-3.6,6
+276,1955,7,26,Carran-Los Venados,Chile-C,Chile,1114,Pyroclastic cone,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,4,-72.07,-40.35,4
+230,1956,3,30,Bezymianny,Kamchatka,Russia,2882,Stratovolcano,Historical,,,,,,yes,no,5,160.587,55.978,3
+219,1957,3,11,Vsevidof,Aleutian Is,United States,2149,Stratovolcano,Historical,,,,,,no,yes,2,-168.68,53.13,3
+300,1957,8,,Oshima,Izu Is-Japan,Japan,758,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Some (~51 to 100 deaths),,,no,no,2,139.38,34.73,6
+267,1957,7,,Unzen,Kyushu-Japan,Japan,1500,Complex volcano,Historical,13.0,Few (~1 to 50 deaths),,,,no,no,0,130.3,32.75,4
+222,1958,10,7,Kuwae,Vanuatu-SW Pacific,Vanuatu,-2,Caldera,Historical,,,,,,yes,no,2,168.536,-16.829,3
+289,1958,7,12,Mahawu,Sulawesi-Indonesia,Indonesia,1324,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,124.858,1.358,5
+224,1960,5,25,Puyehue,Chile-C,Chile,2236,Stratovolcano,Holocene,,,,,,yes,yes,3,-72.117,-40.59,3
+249,1961,4,23,Tate-yama,Honshu-Japan,Japan,2621,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,137.6,36.57,4
+274,1961,6,18,Daisetsu,Hokkaido-Japan,Japan,2290,Stratovolcano,Tephrochronology,2.0,Few (~1 to 50 deaths),,,,no,no,0,142.88,43.68,4
+280,1962,12,31,Gamalama,Halmahera-Indonesia,Indonesia,1715,Stratovolcano,Historical,5.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,127.325,0.8,5
+251,1963,9,5,Batur,Lesser Sunda Is,Indonesia,1717,Caldera,Historical,2.0,Few (~1 to 50 deaths),,,Few (~1 to 50 houses),no,no,2,115.375,-8.242,4
+360,1963,3,18,Agung,Lesser Sunda Is,Indonesia,3142,Stratovolcano,Historical,1028.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),,,yes,no,5,115.508,-8.342,10
+347,1963,12,10,Irazu,Costa Rica,Costa Rica,3432,Stratovolcano,Historical,40.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,3,-83.852,9.979,9
+223,1965,10,24,Kick-'em-Jenny,W Indies,Netherlands,-177,Submarine volcano,Historical,,,,,,yes,no,0,-61.63,12.3,3
+335,1966,4,26,Kelut,Java,Indonesia,1731,Stratovolcano,Historical,215.0,Many (~101 to 1000 deaths),Some (~51 to 100 deaths),,,no,no,4,112.308,-7.93,8
+229,1967,12,4,Deception Island,Antarctica,Antarctica,576,Caldera,Historical,,,,,,yes,no,3,-60.65,-62.97,3
+284,1968,7,29,Arenal,Costa Rica,Costa Rica,1657,Stratovolcano,Historical,80.0,Some (~51 to 100 deaths),,,,no,no,3,-84.703,10.463,5
+232,1969,3,21,Didicas,Luzon-N of,Philippines,244,Compound volcano,Historical,3.0,Few (~1 to 50 deaths),,,,yes,no,2,122.202,19.077,4
+287,1969,1,28,Iya,Lesser Sunda Is,Indonesia,637,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,Many (~101 to 1000 houses),no,no,3,121.63,-8.88,5
+254,1969,8,26,Narugo,Honshu-Japan,Japan,462,Caldera,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,140.73,38.73,4
+323,1970,5,5,Hekla,Iceland-S,Iceland,1491,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,3,-19.7,63.98,7
+342,1970,3,2,Campi Flegrei,Italy,Italy,458,Caldera,Historical,3.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,0,14.139,40.827,8
+225,1971,9,6,Tinakula,Santa Cruz Is-SW Pac,Solomon Is.,851,Stratovolcano,Historical,,,,,,yes,no,2,165.8,-10.38,3
+333,1971,10,26,La Palma,Canary Is,Spain,2426,Stratovolcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,2,-17.83,28.58,8
+242,1972,6,9,"Fournaise, Piton de la",Indian O-W,Reunion,2631,Shield volcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,2,55.713,-21.229,4
+330,1973,4,5,"Hudson, Cerro",Chile-S,Chile,1905,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,0,-72.97,-45.9,8
+263,1973,1,27,Vestmannaeyjar,Iceland-S,Iceland,279,Submarine volcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,3,-20.28,63.43,4
+329,1974,10,10,Fuego,Guatemala,Guatemala,3763,Stratovolcano,Historical,,Few (~1 to 50 deaths),,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,4,-90.88,14.473,8
+227,1974,10,17,Ritter Island,New Guinea-NE of,Papua New Guinea,140,Stratovolcano,Historical,,,,,,yes,no,1,148.121,-5.52,3
+272,1974,7,28,Niigata-Yake-yama,Honshu-Japan,Japan,2400,Lava dome,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,2,138.03,36.92,4
+344,1975,11,29,Kilauea,Hawaiian Is,United States,1222,Shield volcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),MODERATE (~$1 to $5 million),,yes,yes,0,-155.292,19.425,9
+353,1975,1,,Marapi,Sumatra,Indonesia,2891,Complex volcano,Historical,80.0,Some (~51 to 100 deaths),,SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,2,100.473,-0.381,9
+293,1976,8,12,Sangay,Ecuador,Ecuador,5230,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,-78.33,-2.03,5
+297,1976,9,15,Karangetang [Api Siau],Sangihe Is-Indonesia,Indonesia,1784,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,Few (~1 to 50 houses),no,no,2,125.48,2.7800000000000002,5
+313,1977,4,27,Krafla,Iceland-NE,Iceland,650,Caldera,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,1,-16.78,65.73,7
+337,1977,4,5,Karthala,Indian O-W,Comoros,2361,Shield volcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,0,43.38,-11.75,8
+357,1977,1,10,Nyiragongo,Africa-C,"Congo, DRC",3470,Stratovolcano,Historical,,Some (~51 to 100 deaths),,SEVERE (~>$5 to $24 million),,no,no,1,29.25,-1.52,9
+288,1978,1,13,Usu,Hokkaido-Japan,Japan,731,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,140.83,42.53,5
+239,1978,,,Tangkubanparahu,Java,Indonesia,2084,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,0,107.6,-6.77,4
+299,1979,9,6,Aso,Kyushu-Japan,Japan,1592,Caldera,Historical,3.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,131.1,32.88,5
+372,1979,7,18,Iliwerung,Lesser Sunda Is,Indonesia,1018,Complex volcano,Historical,1239.0,Very Many (~1001 or more deaths),Few (~1 to 50 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),yes,no,0,123.59,-8.54,12
+255,1979,3,8,Karkar,New Guinea-NE of,Papua New Guinea,1839,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,145.964,-4.649,4
+271,1980,12,25,Hood,US-Oregon,United States,3426,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,-121.694,45.374,4
+356,1980,5,18,St. Helens,US-Washington,United States,2549,Stratovolcano,Historical,61.0,Some (~51 to 100 deaths),,EXTREME (~$25 million or more),,yes,yes,5,-122.18,46.2,9
+302,1981,6,30,Mayon,Luzon-Philippines,Philippines,2462,Stratovolcano,Historical,200.0,Many (~101 to 1000 deaths),,,,no,no,0,123.685,13.257,6
+265,1981,,,Vilyuchik,Kamchatka,Russia,2173,Stratovolcano,Tephrochronology,,Few (~1 to 50 deaths),,,,no,no,0,158.3,52.68,4
+327,1981,4,27,Alaid,Kuril Is,Russia,2339,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,2,155.55,50.858,7
+366,1982,3,29,"Chichon, El",Mexico,Mexico,1150,Tuff cone,Historical,1879.0,Very Many (~1001 or more deaths),,MODERATE (~$1 to $5 million),,no,yes,5,-93.228,17.36,11
+350,1982,5,17,Galunggung,Java,Indonesia,2168,Stratovolcano,Historical,68.0,Some (~51 to 100 deaths),,SEVERE (~>$5 to $24 million),,no,no,4,108.05,-7.25,9
+277,1983,3,8,Kliuchevskoi,Kamchatka,Russia,4835,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,2,160.638,56.057,4
+321,1983,10,3,Miyake-jima,Izu Is-Japan,Japan,815,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),,no,yes,3,139.53,34.08,7
+315,1983,7,23,Colo [Una Una],Sulawesi-Indonesia,Indonesia,507,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,4,121.608,-0.17,7
+244,1984,9,14,On-take,Honshu-Japan,Japan,3063,Complex volcano,Historical,29.0,Few (~1 to 50 deaths),,,,no,no,0,137.48,35.9,4
+369,1985,11,13,Ruiz,Colombia,Colombia,5321,Stratovolcano,Historical,23080.0,Very Many (~1001 or more deaths),Very Many (~1001 or more deaths),,,no,no,3,-75.322,4.895,11
+361,1986,8,21,Oku Volc Field,Africa-W,Cameroon,3011,Maar,Radiocarbon,1700.0,Very Many (~1001 or more deaths),Many (~101 to 1000 deaths),,,no,no,3,10.5,6.25,10
+373,1987,12,1,Sirung,Lesser Sunda Is,Indonesia,862,Complex volcano,Historical,125.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,yes,0,124.148,-8.51,13
+343,1987,1,25,Pacaya,Guatemala,Guatemala,2552,Complex volcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),Some (~51 to 100 houses),no,no,3,-90.601,14.381,8
+240,1988,12,25,Lonquimay,Chile-C,Chile,2865,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,3,-71.58,-38.377,4
+278,1988,,,Akita-Yake-yama,Honshu-Japan,Japan,1366,Complex volcano,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,0,140.77,39.97,4
+233,1988,5,9,Banda Api,Banda Sea,Pacific Ocean,640,Caldera,Historical,4.0,Few (~1 to 50 deaths),,,,no,no,3,129.871,-4.525,4
+310,1990,5,29,Sabancaya,Peru,Peru,5967,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,3,-71.85,-15.78,7
+311,1990,2,2,Shiveluch,Kamchatka,Russia,3283,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,3,161.36,56.653,7
+368,1991,6,15,Pinatubo,Luzon-Philippines,Philippines,1486,Stratovolcano,Historical,800.0,Many (~101 to 1000 deaths),Few (~1 to 50 deaths),SEVERE (~>$5 to $24 million),,no,yes,6,120.35,15.13,11
+320,1991,12,14,Etna,Italy,Italy,3350,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),,no,no,2,15.004,37.734,7
+243,1991,6,,Mutnovsky,Kamchatka,Russia,2322,Complex volcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,158.195,52.453,4
+257,1991,10,24,Lokon-Empung,Sulawesi-Indonesia,Indonesia,1580,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,1,124.792,1.358,4
+331,1992,9,17,Spurr,Alaska-SW,United States,3374,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,MODERATE (~$1 to $5 million),,no,no,4,-152.25,61.3,8
+354,1992,4,10,"Negro, Cerro",Nicaragua,Nicaragua,728,Cinder cone,Historical,11.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),MODERATE (~$1 to $5 million),Few (~1 to 50 houses),no,no,3,-86.702,12.506,9
+256,1993,1,14,Galeras,Colombia,Colombia,4276,Complex volcano,Historical,9.0,Few (~1 to 50 deaths),,,,no,no,2,-77.37,1.22,4
+298,1993,6,13,Krakatau,Indonesia,Indonesia,813,Caldera,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,1,105.423,-6.102,5
+281,1993,1,21,Wurlali,Banda Sea,Indonesia,868,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,0,128.675,-7.125,5
+237,1994,11,3,Rinjani,Lesser Sunda Is,Indonesia,3726,Stratovolcano,Historical,31.0,Few (~1 to 50 deaths),,,,no,no,3,116.47,-8.42,4
+358,1994,6,6,Huila,Colombia,Colombia,5365,Stratovolcano,Historical,650.0,Many (~101 to 1000 deaths),,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,yes,0,-76.05,2.92,10
+269,1995,2,4,Yasur,Vanuatu-SW Pacific,Vanuatu,361,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,3,169.425,-19.52,4
+266,1995,2,11,Yake-dake,Honshu-Japan,Japan,2455,Stratovolcano,Historical,4.0,Few (~1 to 50 deaths),,,,no,no,1,137.58,36.22,4
+238,1995,5,15,Kelimutu,Lesser Sunda Is,Indonesia,1640,Complex volcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,121.83,-8.758,4
+349,1995,9,6,Parker,Mindanao-Philippines,Philippines,1824,Stratovolcano,Historical,60.0,Some (~51 to 100 deaths),,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,0,124.892,6.12,9
+332,1995,4,2,Fogo,Cape Verde Is,Cape Verde,2829,Stratovolcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,2,-24.35,14.95,8
+214,1996,1,2,Karymsky,Kamchatka,Russia,1536,Stratovolcano,Historical,,,,,,yes,no,2,159.43,54.05,3
+314,1996,9,30,Grimsvotn,Iceland-NE,Iceland,1725,Caldera,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,3,-17.33,64.42,7
+283,1996,12,3,Manam,New Guinea-NE of,Papua New Guinea,1807,Stratovolcano,Historical,13.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,145.061,-4.1,5
+286,1996,9,27,Maderas,Nicaragua,Nicaragua,1394,Stratovolcano,Holocene,6.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,0,-85.515,11.446,5
+285,1996,8,10,Kanlaon,Philippines-C,Philippines,2435,Stratovolcano,Historical,3.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,123.132,10.412,5
+334,1996,4,30,Popocatepetl,Mexico,Mexico,5426,Stratovolcano,Historical,5.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,3,-98.622,19.023,8
+235,1997,7,12,Hakkoda Group,Honshu-Japan,Japan,1585,Stratovolcano,Holocene,3.0,Few (~1 to 50 deaths),,,,no,no,0,140.88,40.65,4
+236,1997,6,25,Soufriere Hills,W Indies,Montserrat,915,Stratovolcano,Historical,22.0,Few (~1 to 50 deaths),,,,no,no,3,-62.18,16.72,4
+318,1998,10,30,San Cristobal,Nicaragua,Nicaragua,1745,Stratovolcano,Historical,1620.0,Very Many (~1001 or more deaths),,,,no,no,0,-87.004,12.702,7
+291,1999,10,16,Tungurahua,Ecuador,Ecuador,5023,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,-78.442,-1.467,5
+245,1999,10,5,Guagua Pichincha,Ecuador,Ecuador,4784,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,3,-78.598,-0.171,4
+415,2000,8,23,Arenal,Costa Rica,Costa Rica,1657,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,-84.703,10.463,5
+422,2000,7,27,Semeru,Java,Indonesia,3676,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,3,112.92,-8.108,4
+380,2000,6,27,Miyake-jima,Izu Is-Japan,Japan,815,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Many (~101 to 1000 deaths),LIMITED (roughly corresponding to less than $1 million),,yes,yes,2,139.53,34.08,11
+388,2002,12,30,Stromboli,Italy,Italy,926,Stratovolcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),yes,no,0,15.213,38.789,8
+385,2002,11,3,Reventador,Ecuador,Ecuador,3562,Stratovolcano,Historical,,Few (~1 to 50 deaths),Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,4,-77.656,-0.078,9
+377,2002,1,17,Nyiragongo,Africa-C,"Congo, DRC",3470,Stratovolcano,Historical,100.0,Some (~51 to 100 deaths),Many (~101 to 1000 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,1,29.25,-1.52,12
+430,2003,7,12,Soufriere Hills,W Indies,Montserrat,915,Stratovolcano,Historical,,,,,,yes,no,3,-62.18,16.72,3
+434,2004,6,8,Tengger Caldera,Java,Indonesia,2329,Stratovolcano,Historical,,,,,,no,no,2,112.95,-7.942,3
+423,2004,1,29,Egon,Lesser Sunda Is,Indonesia,1703,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,1,122.45,-8.67,4
+416,2005,10,1,Santa Ana,El Salvador,El Salvador,2365,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,3,-89.63,13.853,5
+390,2005,11,24,Karthala,Indian O-W,Comoros,2361,Shield volcano,Historical,,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),,no,no,0,43.38,-11.75,8
+382,2006,8,17,Tungurahua,Ecuador,Ecuador,5023,Stratovolcano,Historical,6.0,Few (~1 to 50 deaths),Some (~51 to 100 deaths),SEVERE (~>$5 to $24 million),Many (~101 to 1000 houses),no,no,3,-78.442,-1.467,10
+427,2006,3,17,Raoul Island,Kermadec Is,New Zealand,516,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,-177.92,-29.27,4
+417,2007,9,30,"Tair, Jebel at",Red Sea,Yemen,244,Stratovolcano,Historical,7.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,0,41.742,15.7,5
+421,2007,7,7,Salak,Java,Indonesia,2211,Stratovolcano,Historical,6.0,Few (~1 to 50 deaths),,,,no,no,0,106.73,-6.72,4
+411,2007,4,18,Huila,Colombia,Colombia,5365,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),Few (~1 to 50 houses),no,no,0,-76.05,2.92,7
+433,2008,8,8,Kasatochi,Aleutian Is,United States,314,Stratovolcano,Historical,,,,,,yes,no,3,-175.5,52.18,3
+424,2008,5,2,Chaiten,Chile-S,Chile,962,Caldera,Holocene,1.0,Few (~1 to 50 deaths),,,,no,no,0,-72.646,-42.833,4
+396,2009,3,23,Redoubt,Alaska-SW,United States,3108,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,-152.75,60.48,7
+395,2010,5,27,Pacaya,Guatemala,Guatemala,2552,Complex volcano,Historical,1.0,Few (~1 to 50 deaths),,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,1,-90.601,14.381,8
+431,2010,5,29,Sarigan,Mariana Is-C Pacific,United States,538,Stratovolcano,Holocene,,,,,,yes,yes,0,145.78,16.708,3
+376,2010,10,26,Merapi,Java,Indonesia,2947,Stratovolcano,Historical,367.0,Many (~101 to 1000 deaths),Many (~101 to 1000 deaths),EXTREME (~$25 million or more),Many (~101 to 1000 houses),no,no,0,110.442,-7.542,13
+420,2010,3,31,Eyjafjallajokull,Iceland-S,Iceland,1666,Stratovolcano,Historical,2.0,Few (~1 to 50 deaths),,,,no,no,2,-19.62,63.63,4
+426,2011,2,23,Bulusan,Luzon-Philippines,Philippines,1565,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,2,124.05,12.77,4
+428,2011,7,17,Lokon-Empung,Sulawesi-Indonesia,Indonesia,1580,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,124.792,1.358,4
+386,2011,1,28,Kirishima,Kyushu-Japan,Japan,1700,Shield volcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),,no,no,0,130.87,31.93,8
+404,2011,7,9,Katla,Iceland-S,Iceland,1512,Subglacial volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,-19.05,63.63,7
+381,2011,6,22,Nabro,Africa-NE,Eritrea,2218,Stratovolcano,Holocene,31.0,Few (~1 to 50 deaths),Many (~101 to 1000 deaths),LIMITED (roughly corresponding to less than $1 million),,no,no,3,41.7,13.37,11
+406,2011,6,4,Puyehue,Chile-C,Chile,2236,Stratovolcano,Holocene,,,,MODERATE (~$1 to $5 million),,no,no,4,-72.117,-40.59,7
+410,2012,12,12,Tolbachik,Kamchatka,Russia,3682,Shield volcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,160.33,55.83,7
+398,2013,9,4,Sakura-jima,Kyushu-Japan,Japan,1117,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,130.67,31.58,7
+402,2013,2,,Paluweh,Lesser Sunda Is,Indonesia,875,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,0,121.708,-8.32,7
+403,2013,9,1,Ubinas,Peru,Peru,5672,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,-70.903,-16.355,7
+425,2013,12,13,Okataina,New Zealand,New Zealand,1111,Lava dome,Historical,1.0,Few (~1 to 50 deaths),,,,no,no,0,176.5,-38.12,4
+413,2014,12,18,Gamalama,Halmahera-Indonesia,Indonesia,1715,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,0,127.325,0.8,5
+407,2014,11,23,Fogo,Cape Verde Is,Cape Verde,2829,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),Many (~101 to 1000 houses),no,no,0,-24.35,14.95,7
+408,2014,9,27,On-take,Honshu-Japan,Japan,3063,Complex volcano,Historical,55.0,Some (~51 to 100 deaths),Some (~51 to 100 deaths),,,no,no,3,137.48,35.9,7
+394,2014,2,13,Kelut,Java,Indonesia,1731,Stratovolcano,Historical,7.0,Few (~1 to 50 deaths),,SEVERE (~>$5 to $24 million),Very Many (~1001 or more houses),no,no,0,112.308,-7.93,8
+387,2015,7,31,Manam,New Guinea-NE of,Papua New Guinea,1807,Stratovolcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),,no,no,2,145.061,-4.1,8
+409,2015,4,22,Calbuco,Chile-S,Chile,2003,Stratovolcano,Historical,,,,MODERATE (~$1 to $5 million),Some (~51 to 100 houses),no,no,0,-72.614,-41.326,7
+397,2015,5,7,Karangetang [Api Siau],Sangihe Is-Indonesia,Indonesia,1784,Stratovolcano,Historical,,,,LIMITED (roughly corresponding to less than $1 million),Few (~1 to 50 houses),no,no,0,125.48,2.7800000000000002,7
+432,2016,9,27,Rinjani,Lesser Sunda Is,Indonesia,3726,Stratovolcano,Historical,,,,,,no,no,0,116.47,-8.42,3
+383,2016,5,21,Sinabung,Sumatra,Indonesia,2460,Stratovolcano,Holocene,7.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),EXTREME (~$25 million or more),,no,no,0,98.392,3.17,9
+399,2016,10,8,Aso,Kyushu-Japan,Japan,1592,Caldera,Historical,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,131.1,32.88,7
+429,2016,6,9,Yellowstone,US-Wyoming,United States,2805,Caldera,Tephrochronology,1.0,Few (~1 to 50 deaths),,,,no,no,0,-110.67,44.43,4
+419,2017,9,12,Campi Flegrei,Italy,Italy,458,Caldera,Historical,3.0,Few (~1 to 50 deaths),,,,no,no,0,14.139,40.827,4
+412,2017,7,1,Dieng Volc Complex,Java,Indonesia,2565,Complex volcano,Historical,8.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,0,109.92,-7.2,5
+405,2018,1,5,Kadovar,New Guinea-NE of,Papua New Guinea,365,Stratovolcano,Holocene,,,,LIMITED (roughly corresponding to less than $1 million),,no,no,0,144.62,-3.62,7
+384,2018,1,23,Kusatsu-Shirane,Honshu-Japan,Japan,2176,Stratovolcano,Historical,1.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),,no,no,0,138.55,36.62,9
+389,2018,12,26,Etna,Italy,Italy,3350,Stratovolcano,Historical,,,Few (~1 to 50 deaths),EXTREME (~$25 million or more),Few (~1 to 50 houses),no,yes,2,15.004,37.734,8
+392,2018,7,16,Kilauea,Hawaiian Is,United States,1222,Shield volcano,Historical,,,Few (~1 to 50 deaths),LIMITED (roughly corresponding to less than $1 million),,no,no,0,-155.292,19.425,8
+393,2018,3,30,Aoba,Vanuatu-SW Pacific,Vanuatu,1496,Shield volcano,Historical,4.0,Few (~1 to 50 deaths),,MODERATE (~$1 to $5 million),Few (~1 to 50 houses),no,no,3,167.83,-15.4,8
+379,2018,1,13,Mayon,Luzon-Philippines,Philippines,2462,Stratovolcano,Historical,,,Very Many (~1001 or more deaths),MODERATE (~$1 to $5 million),,no,no,0,123.685,13.257,11
+418,2018,3,21,Ijen,Java,Indonesia,2799,Stratovolcano,Historical,,,Few (~1 to 50 deaths),,,no,no,0,114.242,-8.058,4
+401,2018,12,15,Ambrym,Vanuatu-SW Pacific,Vanuatu,1334,Pyroclastic shield,Historical,,,,MODERATE (~$1 to $5 million),Few (~1 to 50 houses),no,yes,2,168.12,-16.25,7
+375,2018,12,22,Krakatau,Indonesia,Indonesia,813,Caldera,Historical,437.0,Many (~101 to 1000 deaths),Very Many (~1001 or more deaths),EXTREME (~$25 million or more),Very Many (~1001 or more houses),yes,no,1,105.423,-6.102,14
+378,2018,6,3,Fuego,Guatemala,Guatemala,3763,Stratovolcano,Historical,201.0,Many (~101 to 1000 deaths),Few (~1 to 50 deaths),EXTREME (~$25 million or more),Many (~101 to 1000 houses),no,no,2,-90.88,14.473,11
+391,2019,6,26,Ulawun,New Britain-SW Pac,Papua New Guinea,2334,Stratovolcano,Historical,,,Few (~1 to 50 deaths),SEVERE (~>$5 to $24 million),,no,no,0,151.33,-5.05,8
+414,2019,12,9,White Island,New Zealand,New Zealand,321,Stratovolcano,Historical,21.0,Few (~1 to 50 deaths),Few (~1 to 50 deaths),,,no,no,2,177.18,-37.52,5
+400,2020,1,12,Taal,Luzon-Philippines,Philippines,400,Stratovolcano,Historical,,,,EXTREME (~$25 million or more),Very Many (~1001 or more houses),no,no,0,120.993,14.002,7
