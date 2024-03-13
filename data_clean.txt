@@ -1,0 +1,78 @@
+# done on jupyter notebook:
+
+import pandas as pd 
+import altair as alt
+import os
+import numpy as np
+import numpy as np
+import random
+import matplotlib.pyplot as plt 
+import seaborn as sns
+from matplotlib.colors import LogNorm, Normalize
+
+def tsu(x):
+    if (x):
+        return "yes"
+    else:
+        return "no"
+volcano = pd.read_json('data/significant-volcanic-eruption-database.json')
+volcano["month"] = volcano["month"].astype('Int64')
+volcano["day"] = volcano["day"].astype('Int64')
+volcano["Tsunami caused?"]= (volcano["tsu"] == "Tsunami").apply(tsu)
+volcano = volcano.drop("tsu", axis=1)
+volcano["Earthquake caused?"]= (volcano["eq"] == "Earthquake").apply(tsu)
+volcano = volcano.drop("eq", axis=1)
+volcano["Volcano Explosive Index"]= volcano["vei"].astype('Int64')
+volcano = volcano.drop("vei", axis=1)
+volcano = (volcano.drop(["deaths", "deaths_description", 
+                         "missing", "missing_description", 
+                         "injuries", "injuries_description", 
+                         "damage_millions_dollars", "damage_description", 
+                         "houses_destroyed", "houses_destroyed_description", 
+                         "houses_damaged_description", "total_houses_damaged_description",
+                         "total_missing_description", "total_injuries", "total_houses_destroyed", 
+                        "total_damage_millions_dollars", "total_missing"], axis=1))
+volcano["longitude"] = volcano["coordinates"].apply(lambda x: x["lon"])
+volcano["latitude"] = volcano["coordinates"].apply(lambda x: x["lat"])
+volcano = volcano.drop("coordinates", axis=1)
+
+volcano
+
+## getting most destructive
+
+def desc_dmg(x):
+    if x == 'Few (~1 to 50 deaths)':
+        return 2
+    elif x == None:
+        return 1
+    elif x == 'Many (~101 to 1000 deaths)':
+        return 4
+    elif x == 'Some (~51 to 100 deaths)':
+        return 3
+    return 5
+
+def desc_cost(x):
+    if x == None:
+        return 1
+    elif x == 'SEVERE (~>$5 to $24 million)':
+        return 2
+    elif x == 'LIMITED (roughly corresponding to less than $1 million)':
+        return 3
+    elif x == 'MODERATE (~$1 to $5 million)':
+        return 4
+    return 5
+
+def desc_cost(x):
+    if x == None:
+        return 1
+    elif x == 'Few (~1 to 50 houses)':
+        return 2
+    elif x == 'Some (~51 to 100 houses)':
+        return 3
+    elif x == 'Many (~101 to 1000 houses)':
+        return 4
+    return 5
+
+total = volcano['total_deaths_description'].apply(desc_dmg) + volcano['total_injuries_description'].apply(desc_dmg) + volcano['total_damage_description'].apply(desc_cost)
+top = total.sort_values()[-10:]
+volcano.iloc[top.keys()]
