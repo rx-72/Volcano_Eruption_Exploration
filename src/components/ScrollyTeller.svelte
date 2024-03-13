@@ -1,7 +1,8 @@
 <script>
   import Scroller from "@sveltejs/svelte-scroller";
   import App from "../components/App.svelte";
-
+  import Pompeii from "../components/Pompeii.svelte";
+  import Globe from "../components/Globe.svelte";
   let count, index, offset, progress;
 </script>
 

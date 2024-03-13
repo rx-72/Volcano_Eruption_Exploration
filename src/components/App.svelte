@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
     import Graph from './Graph.svelte';
     import Globe from './Globe.svelte';
-
+    import Pompeii from './Pompeii.svelte';
     let volcanos = [];
     let US_volcanos = [];
     let selected = Graph
@@ -86,7 +86,9 @@
 <button class="graphButton" on:click={()=> selected = Globe}>
 	World Globe
 </button>
-
+<button class="graphButton" on:click={()=> selected = Pompeii}>
+    Pompeii
+</button>
 <style>
     .graphButton{
         background-color: #04AA6D;
