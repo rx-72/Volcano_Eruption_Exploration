@@ -1,0 +1,48 @@
+LEGEND IDEA: 
+    let exp_ind = [
+        {text: 0, show: true},
+        {text: 1, show: true},
+        {text: 2, show: true},
+        {text: 3, show: true},
+        {text: 4, show: true},
+        {text: 5, show: true},
+        {text: 6, show: true},
+        {text: 7, show: true}
+    ]
+
+    let exp_ind_f = [
+        {text: 0, show: false},
+        {text: 1, show: false},
+        {text: 2, show: false},
+        {text: 3, show: false},
+        {text: 4, show: false},
+        {text: 5, show: false},
+        {text: 6, show: false},
+        {text: 7, show: false}
+    ]
+
+    const color = {
+        0 : 'black',
+        1: 'gray',
+        2: 'purple',
+        3: 'blue',
+        4: 'green',
+        5: 'yellow',
+        6: 'orange',
+        7: 'red',
+    }
+
+<div class = "legend" style="position: absolute;">
+        {#each exp_ind as source}
+            <div class="source-item" style="background-color: {source.show ? color[source.text] : 'white'} ;">
+            <input
+                bind:checked={source.show}
+                id={source.text}
+                type="checkbox"
+                class="checkbox-round"
+            />
+
+                <label style="color: black;">{source.text}</label>
+            </div>
+        {/each}
+    </div>
