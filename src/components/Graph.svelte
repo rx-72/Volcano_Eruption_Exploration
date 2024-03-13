@@ -479,8 +479,15 @@
                                                                  cx={coord_proj_cx(d)}
                                                                  cy={coord_proj_cy(d)}
                                                                  r={(4*(d.Volcano_explosive_index)+4)/2}
-                                                                 fill='magenta'
+                                                                 fill='gray'
                 						/>
+								<circle
+                                                                 class="special"
+                                                                 cx={coord_proj_cx(d)}
+                                                                 cy={coord_proj_cy(d)}
+                                                                 r={(30)}
+                                                                 fill="gold"
+                                                                />
                 					{/if}
                                                 {/each}
 
@@ -565,4 +572,10 @@
  	.erupt {
     		animation: fadeIn 0.5s;
   	}
+
+        .special {
+                animation: fadeIn 2s;
+                animation: fadeOut 5s;
+                animation-fill-mode: forwards;
+        } 
 </style>
