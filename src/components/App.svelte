@@ -80,15 +80,15 @@
 
 <svelte:component this={selected} {volcanos} {US_volcanos}/>
 
-<button class="test" on:click={()=> selected = Graph}>
+<button class="graphButton" on:click={()=> selected = Graph}>
 	US map
 </button>
-<button class="test" on:click={()=> selected = Globe}>
+<button class="graphButton" on:click={()=> selected = Globe}>
 	World Globe
 </button>
 
 <style>
-    .test{
+    .graphButton{
         background-color: #04AA6D;
         border: black;
         text-align: center;
@@ -100,13 +100,13 @@
 	    animation: fade 2s;
     }
 
-    .test:hover{
+    .graphButton:hover{
         background-color: white;
         border :#04AA6D
     }
 
     @keyframes fade {
-        0%,100% { opacity: 0 }
+        0%,100% { opacity: 0.2 }
         50% { opacity: 1 }
     }
 
