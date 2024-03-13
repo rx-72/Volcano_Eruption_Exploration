@@ -20,11 +20,17 @@
         let states = [];
         let counties = [];
         let mesh;
+
         let selected;
-	
-	let test = 0;
-  	let select = 1;
+	var dots = 'temp';
+	let eruptionIndex = 0;
+        var nextEruptionMode = 1;
+        let select = 1;
 	let mapped = select;
+        
+        var scatterX, scatterY;
+        let svgWidth, svgHeight;
+        var margin = { top: 20, right: 50, bottom: 50, left: 20 };
         
         let selectedYear;
         let prevSelectedYear = null;
@@ -55,10 +61,17 @@
         }
 
         function filterByYearAndUpdateClass(category, button) {
-                // If same button pressed twice, deactivate it and change category to null
-                select = 1;
-    		test = 0; 
-		if (selectedYear === category) {
+                console.log(select, eruptionIndex);
+                if (nextEruptionMode === 1){
+                        select = 1;
+                        eruptionIndex = 0; 
+                } else {
+                        select = 0;
+                        eruptionIndex = 1;
+                }
+
+		// If same button pressed twice, deactivate it and change category to null
+                if (selectedYear === category) {
                         selectedYear = null;
                         category = null;
                 } else {
@@ -83,7 +96,7 @@
         function filterByLocationAndUpdateClass(location, button) {
                 // If same button pressed twice, deactivate it
 		select = 1;
-    		test = 0; 
+    		eruptionIndex = 0; 
                 if (selectedLocation === location) {
                         selectedLocation = null;
                         location = null;
@@ -116,14 +129,22 @@
 			slicing = filteredVolcanos;
                         return yearMatches && locationMatches;
                 });
+                if (dots != 'temp') {
+                        dots.remove();
+                        populateScatter(svg);
+                }
+                
         }
 
 
         onMount(async () => {
 		const us = await fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-albers-10m.json').then(d => d.json())
+                while (US_volcanos.length === 0) {
+                        // Pause for 100 ms
+                        await new Promise(resolve => setTimeout(resolve, 100));
+                }
                 updateFilteredData();
-		// console.log({ us })
-		
+
 		states = topojson.feature(us, us.objects.states).features;
 		// console.log({ features })
 		
@@ -133,13 +154,13 @@
 
                 let min_year = filteredVolcanos.reduce( (min, obj) => (obj.year < min ? obj.year : min), filteredVolcanos[0].year);
                 let max_year = filteredVolcanos.reduce( (max, obj) => (obj.year > max ? obj.year : max), filteredVolcanos[0].year);
-                console.log(min_year, max_year);
+
                 
                 // Function to update SVG when user resizes window
                 function updateSize() {
 
-                        var svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-                        var svgHeight = parseFloat(d3.select('svg').style('height'));
+                        svgWidth = parseFloat(d3.select('svg').style('width'))/3;
+                        svgHeight = parseFloat(d3.select('svg').style('height'));
 
 
                         svg.attr("width", svgWidth + margin.left + margin.right)
@@ -149,36 +170,30 @@
 
                         // Update the x-axis scale
                         scatterX.range([0, svgWidth]);
-                        scatterY.range([0, svgWidth * yScale])
+                        scatterY.range([0, svgWidth * yScale]);
 
                         svg.select('.x-axis').call(d3.axisBottom(scatterX))
                            .selectAll("text").style('font-size', fontSize + "px");
-
-                        var yOffset = Math.abs( min_year / (max_year - min_year)) * svgWidth;
-
-                        // Update the y-axis scale
-                        scatterY.range([0, svgHeight]);
                         svg.select('.y-axis').call(d3.axisLeft(scatterY))
                            .selectAll("text").style('font-size', fontSize + "px");
+
+                        dots.attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
+
                         console.log("Update size", svgWidth, svgHeight);
 
                 }
 
-                console.log("Testing");
+                console.log("eruptionIndexing");
                 
-                
-                var margin = { top: 20, right: 50, bottom: 50, left: 20 };
-                
-                var svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-                var svgHeight = parseFloat(d3.select('svg').style('height'));
+                svgWidth = parseFloat(d3.select('svg').style('width'))/3;
+                svgHeight = parseFloat(d3.select('svg').style('height'));
 
 
 
                 let initialFontSize = Math.max(12, (svgWidth - margin.left - margin.right) / 110);
                 console.log(svgWidth, svgHeight, "Dimensions");
-                console.log(margin);
 
-                var svg = d3.select("#scatter")
+                svg = d3.select("#scatter")
                         .append("svg")
                         .attr("width", svgWidth + margin.left*3 + margin.right)
                         .attr("height", svgHeight)
@@ -186,7 +201,7 @@
 
                         
                 // x-axis
-                var scatterX = d3.scaleLinear().domain([min_year, max_year]).range([0, svgWidth]);
+                scatterX = d3.scaleLinear().domain([min_year, max_year]).range([0, svgWidth]);
                 svg.append("g")
                         .attr("class", "x-axis")
                         .style('font-size', initialFontSize+'px')
@@ -194,11 +209,10 @@
                                 "translate(" + margin.left*3 + "," + (svgWidth + margin.top) + ")")
                         .call(d3.axisBottom(scatterX));
                 
-                var yOffset = Math.abs( min_year / (max_year - min_year)) * svgWidth;
                 let yScale = 3/4;
 
                 // y-axis without tick marks
-                var scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScale]);
+                scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScale]);
                 // svg.append("g")
                 //         .attr("class", "y-axis")
                 //         .call(d3.axisLeft(scatterY))
@@ -210,7 +224,7 @@
                 // tick marks
                 var yMarks = svg.append("g")
                         .attr("class", "y-axis-marks")
-                        .call(d3.axisLeft(scatterY).tickValues([1,2,3,4,5,6,7,8 ]))
+                        .call(d3.axisLeft(scatterY))
                         .attr('text-anchor', 'end')
                         .style('font-size', initialFontSize+'px')
                         .attr('transform',
@@ -236,16 +250,16 @@
                         .style('font-size', initialFontSize + 2 + 'px');
 
 
-                var dots = svg.append('g')
-                                .selectAll('dot')
-                                .data(filteredVolcanos)
-                                .enter()
-                                .append('circle')
-                                .attr('cx', function (d) { return scatterX(d.year); })
-                                .attr('cy', function (d) { return scatterY(d.Volcano_explosive_index); })
-                                .attr('r', 2)
-                                .style('fill', 'red')
-                                // .attr('transform', 'translate(' + (margin.left * 3 + yOffset) + ',' + (margin.top + svgWidth/3) + ')');
+                dots = svg.append('g')
+                        .selectAll('dot')
+                        .data(filteredVolcanos)
+                        .enter()
+                        .append('circle')
+                        .attr('cx', function (d) { return scatterX(d.year); })
+                        .attr('cy', function (d) { return scatterY(d.Volcano_explosive_index); })
+                        .attr('r', 2)
+                        .style('fill', 'red')
+                        .attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
 
                                  
 
@@ -265,7 +279,20 @@
                 window.addEventListener("resize", updateSize);
         })
 
-                
+        function populateScatter(svgg) {
+                dots = svgg.append('g')
+                        .selectAll('dot')
+                        .data(filteredVolcanos)
+                        .enter()
+                        .append('circle')
+                        .attr('cx', function (d) { return scatterX(d.year); })
+                        .attr('cy', function (d) { return scatterY(d.Volcano_explosive_index); })
+                        .attr('r', 2)
+                        .style('fill', 'red')
+                        .attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
+
+        }
+        
         function coord_proj_cx(d) {
                 let coords = [  
                         { lat: d['latitude'], long: d['longitude'] },
@@ -324,35 +351,18 @@
                   .style('visibility', 'hidden')
         }
 
-
-
-        //globe section
-
-        // const projection_globe = geoOrthographic().scale(400);
-        // const graticule = geoGraticule10();
-        // const path_globe = geoPath(projection_globe)
-
-        // let outline = ({type: "Sphere"});
-        // let land, borders;
-
-        // json(
-        //         "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
-        //         ).then((world) => {
-	// 	// then pull out the land-shapes
-	// 	land = topojson.feature(world, world.objects.land);
-	// 	// and border-shapes
-	// 	borders = topojson.mesh(world, world.objects.countries, (a, b) => a !== b)
-        // });
-
-        // const width = 1200;
-	// const height = 2000;
-
   	$: mapper = select;
 
-  	$: if (test === 0) {
+  	$: if (eruptionIndex === 0) {
     		slicing = filteredVolcanos.slice(0, mapper);
   	}
-
+        function calculateAverageExplosivity() {
+                const total = filteredVolcanos.reduce( (sum, volcano) => sum + parseInt(volcano.Volcano_explosive_index), 0);
+                const avg = total / filteredVolcanos.length;
+                console.log("Total:", total, "length: ", filteredVolcanos.length);
+                console.log('average explosivity: ',avg, avg.toFixed(2));
+                return avg.toFixed(2);
+        }
 </script>       
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -384,17 +394,21 @@
 
 <button
   class="one"
-  on:click={() => (select += 1)}
-  on:click={() => updateFilteredData()}
-  on:click={() => (test = 0)}
+  on:click={() => {
+                select += 1;
+                updateFilteredData();
+                eruptionIndex = 0;
+        }}
 >
   Get Next Eruption
 </button>
 <button
   class="all"
-  on:click={() => (test = 1)}
-  on:click={() => updateFilteredData()}
-  on:click={() => (select = 0)}
+  on:click={() => {
+        eruptionIndex = 1;
+        updateFilteredData();
+        select = 0;
+  }}
 >
   Get All Eruptions
 </button>
@@ -423,7 +437,7 @@
 								 class="erupt"
                                                                  cx={coord_proj_cx(d)}
                                                                  cy={coord_proj_cy(d)}
-                                                                 r={4*(d.Volcano_explosive_index)+4}
+                                                                 r={4 * ( d.Volcano_explosive_index ) + 10 }
                                                                  fill={d.Volcano_explosive_index >= 5 ? 'red' : '#ffca20'}
                                                                  opacity={0.6}
                                                                  stroke="gray"
@@ -478,6 +492,8 @@
                 <th class="plot_col">
                         <div id="scatter">
                         </div>
+                        <p>Total # Eruptions: {filteredVolcanos.length}</p>
+                        <p>Avg Explosivity: {calculateAverageExplosivity(filteredVolcanos)}</p>
                 </th>
         </tr>
 </table>
