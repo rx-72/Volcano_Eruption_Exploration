@@ -98,7 +98,7 @@
   }
 
   .WriteUp {
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
     /* color: white; */
     outline: black;
