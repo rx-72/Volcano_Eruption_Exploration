@@ -479,14 +479,16 @@
                                                                  cx={coord_proj_cx(d)}
                                                                  cy={coord_proj_cy(d)}
                                                                  r={(4*(d.Volcano_explosive_index)+4)/2}
-                                                                 fill='gray'
+                                                                 fill='black'
                 						/>
 								<circle
                                                                  class="special"
                                                                  cx={coord_proj_cx(d)}
                                                                  cy={coord_proj_cy(d)}
                                                                  r={(30)}
-                                                                 fill="gold"
+                                                                 fill="blue"
+								 on:mouseover={() => showTooltip(d)}
+                                                                 on:mouseleave={() => hideTooltip(d)}
                                                                 />
                 					{/if}
                                                 {/each}
