@@ -25,7 +25,7 @@
       <h2> A visualization by David Lycke, Dhilan Sunanda Bong, and Joshua Huang</h2>
       <div class='pad'></div>
       <p class="para">
-        Volcano eruptions, while volatile, don't happen often and we are also able to predict when they'll occur. <br> 
+        Volcano eruptions, while volatile and destructive, don't happen often and can be predicted for occurences. <br> 
         However, with the world facing record high temperatures because of climate change, <br>
         experts theorized that this warming may lead to increasing frequency of some natural phenomenoms, <br>
         including volcanic eruptions. 
@@ -37,13 +37,14 @@
       </p>
       <p class="para">Let's put this theory to the test. To determine the activity extent of volcanos currently, <br>
         we've plotted multiple historically recorded volcano eruptions ranging from all the way in the BC period to the near present. <br> 
-        Try exploring and hovering the US map first and compare the occurences and intensity of eruptions between years. <br>
+        We've also provided a familar volcano eruption as an example to demonstrate the importance of both these eruptions but also being prepared for them <br>
+        After reading it, try exploring and hovering the US map first and compare the occurences and intensity of eruptions between years. <br>
         For an extra activity, try to find the eruptions with the highest destructive rank. Then, switch to the global map and try exploring similar or different trends! </p>
         
     </section>
     <section class="Graph">
-      US Volcano records over the past 200+ years. Choose one or multiple
-      filters and explore! Switch to the world map for even further exploration:
+      Volcano records over the past 200+ years. After reading choose one or multiple
+      filters on the US map and explore! Switch to the world map for even further exploration:
   
       <App />
     </section>
@@ -66,16 +67,14 @@
           be because the 2000s to present is a much shorter time range than the 1800 and 1900s). 
       </p>
       <p class="para">
-          Just looking at the results alone, we realistically come to the conclusion that eruption occurences are decreasing, with both the US map <br>
-          and the world map demonstrating large scale decreasing or zigzag eruption counts and explosivity ranges per every year range. This is a <br>
-          conclusion to come forward to but it lacks some insight in how the data grouped by since the pre-1800s holds a much larger time range <br>
-          (since it's effectively everything before 1800) along with the 2000s holding a much smaller time range (since the 2000s just begun). <br>
-          That said the pre-1800s holds a similar count in volcanos to the later time ranges (but with higher explosivity ranges which makes sense <br>
-          realistically since larger scale eruptions are more likely to occur in larger time ranges) but the main factor towards making a conclusion <br>
-          on this plot is that the fact that the 1800s to 1900s saw an increase and boom in both occurences and exposivity range. This is important <br>
-          since climate change began occuring near the 1850s to 1900s. Therefore the evidence of occurences and scale being factored with climate <br>
-          change is supported by the plot and we can see some evidence of both occuring on the US and world map. The next step would be to follow <br>
-          up this confirmation with further data exploration and data binning from the 1800s to present.
+          As a whole alone, it looks to be that both the US map and the world Globe map followed a trend of high focus of explosivity <br>
+          ranges in the early stages of the timeline before settling down though slightly increasing in the 1900s. We're also seeing <br>
+          the highest amounts of unique eruptions occuring the 1900s as well on both the US map and the world Globe map. Based on the entirety <br>
+          of the data, the trendline seems to be rather negative in terms of explosivity and either middling to positive on the <br>
+          number of occurences. This does seem to indicate that volcano activity seems to be middling or even decreasing. That said, <br>
+          the data between the 1800s and 1900s does seem to indicate some increasement in occurences on both maps, which along with the <br>
+          fact that data for the 2000s is still developing may suggest that a potential upwelling may still be on the way for the <br>
+          data.
       </p>
       </section>
   </div>
@@ -111,7 +110,7 @@
   }
 
   .Conclusion {
-    height: 120vh;
+    height: 110vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
     /* color: white; */
     outline: black;
