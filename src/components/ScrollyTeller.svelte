@@ -98,7 +98,7 @@
   }
 
   .WriteUp {
-    height: 100vh;
+    height: 80vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
     /* color: white; */
     outline: black;
@@ -110,7 +110,7 @@
   }
 
   .Conclusion {
-    height: 110vh;
+    height: 90vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
     /* color: white; */
     outline: black;
