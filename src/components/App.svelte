@@ -6,7 +6,7 @@
     import Pompeii from './Pompeii.svelte';
     let volcanos = [];
     let US_volcanos = [];
-    let selected = Graph
+    let selected = Pompeii
 
     onMount(async () => {
         const res = await fetch(
@@ -80,14 +80,14 @@
 
 <svelte:component this={selected} {volcanos} {US_volcanos}/>
 
+<button class="graphButton" on:click={()=> selected = Pompeii}>
+    Pompeii
+</button>
 <button class="graphButton" on:click={()=> selected = Graph}>
 	US map
 </button>
 <button class="graphButton" on:click={()=> selected = Globe}>
 	World Globe
-</button>
-<button class="graphButton" on:click={()=> selected = Pompeii}>
-    Pompeii
 </button>
 <style>
     .graphButton{
