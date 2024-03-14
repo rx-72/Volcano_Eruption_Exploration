@@ -365,9 +365,9 @@
           style:max-height="100%"
           >   
 
-              <path d={path_globe(outline)} fill="#12dbff"/>
-              <path d={path_globe(graticule)} stroke="black" fill="none"/>
-              <path d={path_globe(land)} fill="green"/>
+              <path d={path_globe(outline)} fill="#09e6ed"/>
+              <path d={path_globe(graticule)} stroke="none" fill="none"/>
+              <path d={path_globe(land)} fill="lightgreen"/>
               <path d={path_globe(borders)} fill="none" stroke="black" />
               <path d={path_globe(outline)} fill="none" stroke="black" />
 
@@ -394,14 +394,16 @@
                     cx={coord_proj_cx(d)}
                     cy={coord_proj_cy(d)}
                     r={(4 * d.Volcano_explosive_index + 4) / 2}
-                    fill="gray"
+                    fill="black"
                   />
 		<circle
                   class="special"
                     cx={coord_proj_cx(d)}
                     cy={coord_proj_cy(d)}
                     r={(4 * 5+ 4)}
-                    fill="gold"
+                    fill="blue"
+		    on:mouseover={showTooltip(d)}
+                    on:mouseleave={hideTooltip(d)}
                   />
                 {/if}
               {/each}
