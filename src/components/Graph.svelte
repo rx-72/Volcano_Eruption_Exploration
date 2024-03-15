@@ -395,7 +395,10 @@
                         class="btn"
                         class:btn-outline-primary={selectedYear !== category}
                         class:btn-primary={selectedYear === category}
-                        on:click={() => filterByYearAndUpdateClass(category)}
+                        on:click={() => {
+                                filterByYearAndUpdateClass(category);
+                                hideTooltip();
+                        }}
                 >
                         {category}
                 </button>
@@ -408,7 +411,10 @@
                         class="btn"
                         class:btn-outline-primary={selectedLocation !== location}
                         class:btn-primary={selectedLocation === location}
-                        on:click={() => filterByLocationAndUpdateClass(location)}>
+                        on:click={() => {
+                                filterByLocationAndUpdateClass(location);
+                                hideTooltip();
+                        }}>
                         {location}
                 </button>
         {/each}
@@ -422,9 +428,7 @@
         nextEruptionMode = 1;
         updateFilteredData();
         const newVolcano = filteredVolcanos[select - 1];
-        const tooltipX = coord_proj_cx(newVolcano);
-        const tooltipY = coord_proj_cy(newVolcano);
-        showTooltip(filteredVolcanos[select - 1], tooltipX, tooltipY);
+        showTooltip(filteredVolcanos[select - 1]);
   }}
 > Get Next Eruption </button>
 
@@ -435,6 +439,7 @@
         nextEruptionMode = 0;
         select = 0;
         updateFilteredData();
+        hideTooltip();
   }}
 > Get All Eruptions </button>
 
