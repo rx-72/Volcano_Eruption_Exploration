@@ -23,8 +23,6 @@
   </div> -->
 
   <div class="foreground" slot="foreground">
-    ##Can adjust this, but this is what I was working with while testing, it 
-    ##uses 150% zoom on my monitor. 
     <svg width="1200px" height="300px" viewBox="0 0 1200 300"> 
       <style>
           .volcano { fill: sienna; }
