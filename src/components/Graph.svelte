@@ -497,7 +497,6 @@
         eruptionIndex = 0;
         nextEruptionMode = 1;
         updateFilteredData();
-        const newVolcano = filteredVolcanos[select - 1];
         showTooltip(filteredVolcanos[select - 1]);
 
   }}
@@ -625,7 +624,7 @@
                 width: 60%;
         }
         .plot_col {
-                width: 30%;
+                width: 40%;
         }
 
 	.all {

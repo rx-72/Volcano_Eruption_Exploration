@@ -3,6 +3,7 @@
 
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
     import * as topojson from 'topojson-client';
     import { geoPath, geoAlbersUsa } from 'd3-geo';
     import { draw } from 'svelte/transition';
@@ -15,9 +16,12 @@
 
     let outline = ({type: "Sphere"});
     let land, borders;
-    let selected = 1;
-    let mapper = selected;
-    let test = 0;
+    const currentIndex = writable('');
+    let selected;
+    let eruptionIndex = 0;
+    var nextEruptionMode = 1;
+    let select = 1;
+	  let mapped = select;
 
          
     var scatterX, scatterY;
@@ -57,41 +61,52 @@
       // Function to update SVG when user resizes window
       function updateSize() {
 
-              svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-              svgHeight = parseFloat(d3.select('svg').style('height'));
+        graphTable = d3.select('th').node().getBoundingClientRect();
+        globeWidth = d3.select('svg').node().width;
+        // console.log('globe', globeWidth)
+
+        svgWidth = parseFloat(graphTable.width)/3;
+        svgHeight = parseFloat(graphTable.height);
 
 
-              svg.attr("width", svgWidth + margin.left + margin.right)
-                  .attr("height", svgWidth + margin.left + margin.right)
+        svg.attr("width", svgWidth + margin.left + margin.right)
+           .attr("height", svgWidth + margin.left + margin.right)
 
-              var fontSize = Math.max(12, (svgWidth - margin.left - margin.right) / 110);
+        var fontSize = Math.max(12, (svgWidth - margin.left - margin.right) / 110);
 
-              // Update the x-axis scale
-              scatterX.range([0, svgWidth]);
-              scatterY.range([0, svgWidth * yScale]);
+        // Update the x-axis scale
+        scatterX.range([0, svgWidth]);
+        scatterY.range([0, svgWidth * yScale]);
 
-              svg.select('.x-axis').call(d3.axisBottom(scatterX))
-                  .selectAll("text").style('font-size', fontSize + "px");
-              svg.select('.y-axis').call(d3.axisLeft(scatterY))
-                  .selectAll("text").style('font-size', fontSize + "px");
+        svg.select('.x-axis').call(d3.axisBottom(scatterX))
+            .selectAll("text").style('font-size', fontSize + "px");
+        svg.select('.y-axis').call(d3.axisLeft(scatterY))
+            .selectAll("text").style('font-size', fontSize + "px");
 
-              dots.attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
+        dots.attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
 
-              console.log("Update size", svgWidth, svgHeight);
+        // console.log("Update size", svgWidth, svgHeight);
 
       }
 
-      console.log("Globe eruptionIndexing");
+      // console.log("Globe eruptionIndexing");
       
-      svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-      svgHeight = parseFloat(d3.select('svg').style('height'));
+      // console.log("eruptionIndexing");
+                      
+      let graphTable = d3.select('th').node().getBoundingClientRect();
+
+      svgWidth = parseFloat(graphTable.width)/3;
+      svgHeight = parseFloat(graphTable.height)*4/5;
       if (isNaN(svgHeight)) {
         svgHeight = svgWidth*3/2;
       }
-      console.log("SVG Dimensinos: ",svgWidth, svgHeight);
-
+      console.log("Table: ",svgWidth, svgHeight);
+      var textOffset = d3.select('path').node().getBoundingClientRect().left / 4;
+      console.log("textOffset", textOffset);
+      d3.select('.move').style("transform", "translateX(" + textOffset + "px)");
+      
       let initialFontSize = Math.max(12, (svgWidth - margin.left - margin.right) / 110);
-      console.log(svgWidth, svgHeight, "Dimensions");
+      // console.log(svgWidth, svgHeight, "Dimensions");
 
       svg = d3.select("#scatter")
               .append("svg")
@@ -186,8 +201,8 @@
     function calculateAverageExplosivity() {
                 const total = filteredVolcanos.reduce( (sum, volcano) => sum + parseInt(volcano.Volcano_explosive_index), 0);
                 const avg = total / filteredVolcanos.length;
-                console.log("Total:", total, "length: ", filteredVolcanos.length);
-                console.log('average explosivity: ',avg, avg.toFixed(2));
+                // console.log("Total:", total, "length: ", filteredVolcanos.length);
+                // console.log('average explosivity: ',avg, avg.toFixed(2));
                 return avg.toFixed(2);
         }
 
@@ -198,7 +213,7 @@
                 let coords = [  
                         { lat: d['latitude'], long: d['longitude'] },
                         ].map(p => projection_globe([p.long, p.lat]))
-                //$: console.log(coords[0][0])
+                //$: // console.log(coords[0][0])
                 return coords[0][0]
     }
 
@@ -206,8 +221,8 @@
             let coords = [
 		    { lat: d['latitude'], long: d['longitude'] },
 	            ].map(p => projection_globe([p.long, p.lat]))
-            //$: console.log(d['longitude'])
-            //$: console.log(coords[0][1])
+            //$: // console.log(d['longitude'])
+            //$: // console.log(coords[0][1])
 
             return coords[0][1]
     }
@@ -220,13 +235,27 @@
                 }<br>Destruction Rank (From 1 to 15): ${d.damage_caused_rank}`)
                   .style("left", (event.pageX + 10) + "px")
                   .style("top", (event.pageY + 10) + "px");
-                console.log(d)
+                // console.log(d)
     }
 
     function hideTooltip(d) {
             d3.select("#tooltip")
                 .style('visibility', 'hidden')
     }
+
+    function findCurrentIndex() {
+                const total = filteredVolcanos.length;
+                if (total == 0) {
+                        return "No eruptions recorded";
+                }
+                const cur = select;
+                // If in next eruption mode, show the current progress
+                if (nextEruptionMode == 1) {
+                        return cur + " out of " + total + " eruptions";
+                } else {
+                        return "Total " + total + " eruptions";
+                }
+        }
 
     let selectedYear;
     let prevSelectedYear = null;
@@ -256,59 +285,65 @@
     }
 
     function filterByYearAndUpdateClass(category, button) {
-    // If same button pressed twice, deactivate it and change category to null
+      // console.log(select, eruptionIndex);
+      if (nextEruptionMode === 1){
+              select = 1;
+              eruptionIndex = 0; 
+      } else {
+              select = 0;
+              eruptionIndex = 1;
+      }
 
-	selected = 1;
-    	test = 0;
-    	if (selectedYear === category) {
-      		selectedYear = null;
-      		category = null;
-    	} else {
-      		// If not, change the selected year to the pressed button
-      		selectedYear = category;
-    	}
+      // If same button pressed twice, deactivate it and change category to null
+        if (selectedYear === category) {
+                selectedYear = null;
+                category = null;
+        } else {
+        // If not, change the selected year to the pressed button
+                selectedYear = category;
+        }
 
-    	// Deactivates the previously pressed button
-    	if (prevSelectedYear && prevSelectedYear !== button) {
-      		prevSelectedYear.setAttribute("class", "btn btn-outline-primary");
-    	}
+        // Deactivates the previously pressed button
+        if (prevSelectedYear && prevSelectedYear !== button) {
+                prevSelectedYear.setAttribute('class', 'btn btn-outline-primary');
+        }
+        
+        // Set the prevSelectedYear to the current button
+        if (button) {
+                button.setAttribute('class', 'btn btn-primary');
+                prevSelectedYear = button;
+        };
 
-    	// Set the prevSelectedYear to the current button
-    	if (button) {
-      		button.setAttribute("class", "btn btn-primary");
-      		prevSelectedYear = button;
-    	}
-
-    	filterByYear(category);
-  }
+        filterByYear(category);
+    }
 
   function updateFilteredData() {
-    filteredVolcanos = volcanos.filter((d) => {
-      const yearMatches =
-        filterState.year === "pre-1800s"
-          ? d.year < 1800
-          : filterState.year !== null
-            ? d.year >= filterState.year && d.year <= filterState.year + 99
-            : true;
-      //const locationMatches = filterState.location ? d.location === filterState.location : true;
-      // console.log("Filtering by year:", filterState.year);
-      // console.log("Filtering by location:", filterState.location);
-      // console.log("Number of matches:", filteredVolcanos.length);
+                // console.log("nextEruptionMode ", nextEruptionMode);
+                filteredVolcanos = volcanos.filter(d => {
+                        const yearMatches = filterState.year === 'pre-1800s' ? d.year < 1800 : filterState.year !== null ? d.year >= filterState.year && d.year <= filterState.year + 99 : true; 
+                        // console.log("Filtering by year:", filterState.year);
+                        // console.log("Filtering by location:", filterState.location);
+                        // console.log("Number of matches:", filteredVolcanos.length);
+			slicing = filteredVolcanos;
+                        return yearMatches;
+                });
+                currentIndex.set(findCurrentIndex());
+                if (dots != 'temp') {
+                        dots.remove();
+                        populateScatter(svg);
+                }
+                if (nextEruptionMode == 0) {
+                        eruptionIndex = 1;
+                        nextEruptionMode = 0;
+                        select = 0;
+                        hideTooltip();
+                }
+                slicing = filteredVolcanos;
+        }
 
-      slicing = filteredVolcanos;
-      return yearMatches; //&& locationMatches;
-    });
-    console.log(dots);
-    if (dots != 'temp') {
-      console.log('populateScatter');
-      dots.remove();
-      populateScatter(svg);
-    }
-  }
-
-    //console.log(volcanos);
-  $: mapper = selected;
-  $: if (test === 0) {
+    //// console.log(volcanos);
+  $: mapper = select;
+  $: if (eruptionIndex === 0) {
     slicing = filteredVolcanos.slice(0, mapper);
   } 
 </script>
@@ -335,26 +370,34 @@
 
 <button
   class="one"
-  on:click={() => (selected += 1)}
-  on:click={() => updateFilteredData()}
-  on:click={() => (test = 0)}
->
-  Get Next Eruption
-</button>
+  on:click={() => {
+        select += select >= filteredVolcanos.length ? 0 : 1;
+        eruptionIndex = 0;
+        nextEruptionMode = 1;
+        updateFilteredData();
+        showTooltip(filteredVolcanos[select - 1]);
+  }}
+  on:mouseleave={() => hideTooltip()}
+> Get Next Eruption </button>
+
 <button
   class="all"
-  on:click={() => (test = 1)}
-  on:click={() => updateFilteredData()}
-  on:click={() => (selected = 0)}
->
-  Get All Eruptions
-</button>
+  on:click={() => {
+        eruptionIndex = 1;
+        nextEruptionMode = 0;
+        select = 0;
+        updateFilteredData();
+        hideTooltip();
+  }}
+  on:mouseleave={() => hideTooltip()}
+> Get All Eruptions </button>
 <table class='map_plot_split'>
   <tr>
     <th class='map_col'>
+      <p class='move'> {$currentIndex} </p>
       <div class="globe"> 
 
-          <svg
+        <svg
           {width}
           {height}
           viewBox="-120 0 {width} {height}"
@@ -365,48 +408,52 @@
           style:max-height="100%"
           >   
 
-              <path d={path_globe(outline)} fill="#09e6ed"/>
-              <path d={path_globe(graticule)} stroke="none" fill="none"/>
-              <path d={path_globe(land)} fill="lightgreen"/>
-              <path d={path_globe(borders)} fill="none" stroke="black" />
-              <path d={path_globe(outline)} fill="none" stroke="black" />
+          <path d={path_globe(outline)} fill="#09e6ed"/>
+          <path d={path_globe(graticule)} stroke="none" fill="none"/>
+          <path d={path_globe(land)} fill="lightgreen"/>
+          <path d={path_globe(borders)} fill="none" stroke="black" />
+          <path d={path_globe(outline)} fill="none" stroke="black" />
 
-              {#each slicing as d, i}
-                      <circle
-              class="erupt"
-                          cx={coord_proj_cx(d)}
-                          cy={coord_proj_cy(d)}
-                          r={4*(d.Volcano_explosive_index)+4}
-                    fill={d.Volcano_explosive_index >= 5 ? 'red' : '#ffca20'}
-                          opacity={0.6}
-                    stroke="gray"
-                    role="button"
-                          on:mouseover={
-                                  showTooltip(d)
-                          }
-                          on:mouseleave={
-                                  hideTooltip(d)
-                          }
-                      />
-          {#if i + 1 === selected}
-                  <circle
-                  class="erupt"
-                    cx={coord_proj_cx(d)}
-                    cy={coord_proj_cy(d)}
-                    r={(4 * d.Volcano_explosive_index + 4) / 2}
-                    fill="black"
-                  />
-		<circle
-                  class="special"
-                    cx={coord_proj_cx(d)}
-                    cy={coord_proj_cy(d)}
-                    r={(4 * 5+ 4)}
-                    fill="blue"
-		    on:mouseover={showTooltip(d)}
-                    on:mouseleave={hideTooltip(d)}
-                  />
-                {/if}
-              {/each}
+          {#each slicing as d, i}
+                    <!-- svelte-ignore a11y-interactive-supports-focus -->
+                    <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+                    <circle
+            class="erupt"
+              cx={coord_proj_cx(d)}
+              cy={coord_proj_cy(d)}
+              r={4*(d.Volcano_explosive_index)+4}
+              fill={d.Volcano_explosive_index >= 5 ? 'red' : '#ffca20'}
+              opacity={0.6}
+              stroke="gray"
+              role="button"
+              on:mouseover={
+                showTooltip(d)
+              }
+              on:mouseleave={
+                hideTooltip(d)
+              }
+                    />
+            <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+            {#if i + 1 === select}
+                <circle
+                class="erupt"
+                  cx={coord_proj_cx(d)}
+                  cy={coord_proj_cy(d)}
+                  r={(4 * d.Volcano_explosive_index + 4) / 2}
+                  fill="black"
+                />
+              <!-- svelte-ignore a11y-no-static-element-interactions -->
+              <circle
+                class="special"
+                  cx={coord_proj_cx(d)}
+                  cy={coord_proj_cy(d)}
+                  r={(4 * 5+ 4)}
+                  fill="blue"
+                  on:mouseover={showTooltip(d)}
+                  on:mouseleave={hideTooltip(d)}
+                />
+              {/if}
+            {/each}
 
             <circle cx="-45" cy="490" r="20" fill="orange" opacity={0.6} />
             <text x="-10" y="495" font-size="16px"> Explosivity less than 5 </text>
