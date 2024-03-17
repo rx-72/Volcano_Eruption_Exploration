@@ -3,6 +3,7 @@
 
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
     import * as topojson from 'topojson-client';
     import { geoPath, geoAlbersUsa } from 'd3-geo';
     import { draw } from 'svelte/transition';
@@ -19,7 +20,9 @@
     let mapper = selected;
     let test = 0;
     let hasClicked = false; 
-         
+    let pompeiiText = writable('');
+
+  
     var scatterX, scatterY;
     let svgWidth, svgHeight;
     var margin = { top: 20, right: 50, bottom: 50, left: 20 };
@@ -27,9 +30,12 @@
     let projection = geoOrthographic();
     let path = geoPath().projection(projection);
     let dots = 'temp';
-    let infoText = "The eruption of Mt. Vesuvius in 79 A.D is perhaps the single most recognized eruption in history, known for destroying the city of Pompeii. But is it the biggest eruption in history? Click the button to find out.";
+    const text1 = "The eruption of Mt. Vesuvius in 79 A.D is perhaps the single most recognized eruption in history, known for destroying the city of Pompeii. But is it the biggest eruption in history? Click the button to find out.";
+    const text2 = "As you can see, despite its reputation Vesuvius is not even the biggest eruption in present-day Italy! Eruptions can be measured using the Volcanic Explosivity Index, or VEI. Similar to the Richter Scale for Earthquakes, the VEI is logarithmic, meaning that a 2 on the VEI is an eruption 10x as powerful as a 1. The eruption that destroyed Pompeii has a VEI of 5, while the 1991 eruption of Mt. Etna is listed as a 7, meaning that it was 100x as explosive! Knowing this, we can deduce that the eruption of Mt. Vesuvius is not famous for its overwhelming scale, but for the historical lack of preparation and loss of life which it caused.";
+    let infoText = text1;
     export let volcanos;
     export let US_volcanos;
+
     
     const firstCircleSize = 5; // Significantly smaller
     const secondCircleMultiplier = 10;
@@ -96,16 +102,26 @@
     }
     onMount(() => {
         setupProjection(2400, [-12.8333, -42.8333]); // Significantly more zoomed in on Italy
+        pompeiiText.set('Put it in perspective');
     });
 
     // This is called when the button is clicked to show the second eruption
     function comparativeEruption() {
+      console.log('click', hasClicked);
+      if (hasClicked == false) {
         hasClicked = true; 
-        infoText = "As you can see, despite its reputation Vesuvius is not even the biggest eruption in present-day Italy! Eruptions can be measured using the Volcanic Explosivity Index, or VEI. Similar to the Richter Scale for Earthquakes, the VEI is logarithmic, meaning that a 2 on the VEI is an eruption 10x as powerful as a 1. The eruption that destroyed Pompeii has a VEI of 5, while the 1991 eruption of Mt. Etna is listed as a 7, meaning that it was 100x as explosive! Knowing this, we can deduce that the eruption of Mt. Vesuvius is not famous for its overwhelming scale, but for the historical lack of preparation and loss of life which it caused.";
+        infoText = text2;
         setupProjection(1200, [-12.8333, -42.8333], true); // Zooms out a bit
+        pompeiiText.set('Mount Vesuvius');
+      } else {
+        hasClicked = false;
+        infoText = text1;
+        setupProjection(2400, [-12.8333, -42.8333]); // Significantly more zoomed in on Italy
+        pompeiiText.set('Put it in perspective');
+      }
     }
 </script>
-<button on:click={comparativeEruption}>Comparative Eruption</button>
+<button on:click={comparativeEruption} style="font-size: 20px;">{$pompeiiText}</button>
 <div class="container">
     <svg bind:this={svg} width="800" height="450"></svg>
     <div class="info-text">

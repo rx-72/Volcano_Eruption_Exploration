@@ -25,7 +25,8 @@
   <div class="foreground" slot="foreground">
     <!-- Can adjust this, but this is what I was working with while testing, it 
     uses 150% zoom on my monitor.  -->
-    <svg width="1200px" height="300px" viewBox="0 0 1200 300"> 
+    <div class="Animation-Banner">
+    <svg width="50%" viewBox="0 0 1200 300"> 
       <style>
           .volcano { fill: sienna; }
           .lava-flow {
@@ -88,6 +89,7 @@
       <path class="lava-flow" d="M1095,150 Q1105,200 1115,250" style="animation-delay: 2.1s;"/>
       <path class="lava-flow" d="M1095,150 Q1085,200 1075,250" style="animation-delay: 2.1s;"/>
   </svg>
+    </div>
     <section class="WriteUp">
       <h1 class="title">Are Volcanoes Becoming Deadlier?</h1>
       <h2> A visualization by David Lycke, Dhilan Sunanda Bong, and Joshua Huang</h2>
@@ -111,8 +113,8 @@
         
     </section>
     <section class="Graph">
-      Volcano records over the past 200+ years. After reading choose one or multiple
-      filters on the US map and explore! Switch to the world map for even further exploration:
+      <p>Volcano records over the past 200+ years. After reading choose one or multiple
+      filters on the US map and explore! Switch to the world map for even further exploration:</p>
   
       <App />
     </section>
@@ -165,6 +167,14 @@
     margin-top: 0px;
   }
 
+  .Animation-Banner {
+    background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */;
+    text-align: center;
+  }
+  .Animation-Banner svg {
+        display: inline-block; /* Make the SVG display as an inline block element */
+    }
+  
   .WriteUp {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.2); /* 20% opaque */
@@ -196,15 +206,21 @@
   .para {
     padding: 1em
   }
-
+  h1 {
+    font-size: 32px;
+  }
   h2 {
     text-align:center;
-    font-size: 18px;
+    font-size: 24px;
     color:gray;
     margin: 2px;
   }
   .pad {
     margin:15vh;
+  }
+
+  p {
+    font-size: 20px;
   }
   
 </style>
