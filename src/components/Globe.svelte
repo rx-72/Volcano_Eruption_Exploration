@@ -76,7 +76,7 @@
 
         // Update the x-axis scale
         scatterX.range([0, svgWidth]);
-        scatterY.range([0, svgWidth * yScale]);
+        scatterY.range([0, svgWidth * yScaleFactor]);
 
         svg.select('.x-axis').call(d3.axisBottom(scatterX))
             .selectAll("text").style('font-size', fontSize + "px");
@@ -124,10 +124,10 @@
                       "translate(" + margin.left*3 + "," + (svgWidth + margin.top) + ")")
               .call(d3.axisBottom(scatterX).ticks(7));
       
-      let yScale = 3/4;
+      let yScaleFactor = 3/4;
 
       // y-axis without tick marks
-      scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScale]);
+      scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScaleFactor]);
       // svg.append("g")
       //         .attr("class", "y-axis")
       //         .call(d3.axisLeft(scatterY))
@@ -160,7 +160,7 @@
               .attr('class', 'y-label')
               .attr('text-anchor', 'middle')
               .attr('text-align', 'center')
-              .attr('transform', 'translate(' + (margin.left) + ',' + (margin.top + svgWidth * (1-yScale) + (svgWidth*yScale/2)) + ') rotate(-90)')
+              .attr('transform', 'translate(' + (margin.left) + ',' + (margin.top + svgWidth * (1-yScaleFactor) + (svgWidth*yScaleFactor/2)) + ') rotate(-90)')
               .text("Explosivity")
               .style('font-size', initialFontSize + 2 + 'px');
 
@@ -176,7 +176,7 @@
               .style('fill', function (d) {return d.Volcano_explosive_index >= 5 ? 'red' : '#ffaa20'})
               .attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
 
-
+      
 
               
       // updateSize when user resizes window

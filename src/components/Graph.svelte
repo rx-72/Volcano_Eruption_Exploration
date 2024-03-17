@@ -225,6 +225,27 @@
                                 "translate(" + margin.left*3 + "," + (svgWidth + margin.top) + ")")
                         .call(d3.axisBottom(scatterX));
                 
+
+                        const binWidth = 100;
+                const numBins = Math.ceil((max_year - min_year + 1) / binWidth);
+                const xDomain = d3.range(min_year, max_year + binWidth, binWidth);
+
+                // // x-axis
+                // scatterX = d3.scaleBand()
+                //         .domain(xDomain)
+                //         .range([0, svgWidth]);
+
+                // const tickValues = [-2000, -1500, -1000, -500, 0, 500, 1000, 1500, 2000];
+                // // Append the x-axis to the SVG
+                // var x_axis = svg.append("g")
+                // .attr("class", "x-axis")
+                // .style('font-size', initialFontSize + 'px')
+                // .attr("transform", "translate(" + margin.left*3 + "," + (svgWidth + margin.top*2) + ")")
+                // .call(d3.axisBottom(scatterX)
+                //         .tickValues(scatterX.domain().filter((d, i) => tickValues.includes(d)))
+                // );
+
+
                 let yScaleFactor = 3/4;
 
                 // y-axis without tick marks
@@ -258,65 +279,64 @@
                         .text("Explosivity")
                         .style('font-size', initialFontSize + 2 + 'px');
 
-                function kernelDensityEstimator(kernel, X) {
-                        return function(V) {
-                                return X.map(function(x) {
-                                        return [x, d3.mean(V, function(v) { return kernel(x - v); })];
-                                });
-                        };
-                }
-                function kernelEpanechnikov(k) {
-                        return function(v) {
-                                return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
-                        };
-                }
+                // function kernelDensityEstimator(kernel, X) {
+                //         return function(V) {
+                //                 return X.map(function(x) {
+                //                         return [x, d3.mean(V, function(v) { return kernel(x - v); })];
+                //                 });
+                //         };
+                // }
+                // function kernelEpanechnikov(k) {
+                //         return function(v) {
+                //                 return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+                //         };
+                // }
 
-                // Compute kernel density estimation for each column:
-                var kde = kernelDensityEstimator(kernelEpanechnikov(7), scatterX.ticks(10)) // increase this 40 for more accurate density.
-                var allDensity = []
-                var categories = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-                var n = categories.length;
-                let i;
-                for (let i = 0; i < n; i++) {
-                        let category = categories[i];
-                        let values = filteredVolcanos.filter(d => d.Volcano_explosive_index == category).map(d => d.year);
-                        // console.log("Values for category " + category + ":", values); // Log values for debugging
-                        // console.log("Category", category, values);
-                        let density = kde(values);
-                        // console.log("Density for category " + category + ":", density); // Log density for debugging
-                        allDensity.push({ key: category, density: density });
-                }
-                console.log(allDensity);
+                // // Compute kernel density estimation for each column:
+                // var kde = kernelDensityEstimator(kernelEpanechnikov(7), scatterX.ticks(20)) // increase this 40 for more accurate density.
+                // var allDensity = []
+                // var categories = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+                // var n = categories.length;
+                // let i;
+                // for (let i = 0; i < n; i++) {
+                //         let category = categories[i];
+                //         let values = filteredVolcanos.filter(d => d.Volcano_explosive_index == category).map(d => d.year);
+                //         // console.log("Values for category " + category + ":", values); // Log values for debugging
+                //         // console.log("Category", category, values);
+                //         let density = kde(values);
+                //         // console.log("Density for category " + category + ":", density); // Log density for debugging
+                //         allDensity.push({ key: category, density: density });
+                // }
+                // console.log(allDensity);
 
-                // Define x-scale (assuming `scatterX` is already defined)
-                const xScale = scatterX;
+                // // Define x-scale (assuming `scatterX` is already defined)
+                // const xScale = scatterX;
 
-                // Define y-scale for the density curves
-                const yScale = scatterY;
+                // // Define y-scale for the density curves
+                // const yScale = scatterY;
 
-                // Add areas
-                svg.selectAll(".areas")
-                        .data(allDensity)
-                        .enter()
-                        .append("path")
-                        .attr("class", "areas")
-                        .attr("transform", function(d) {
-                                return "translate(" + (margin.left*3) + "," + ( -scatterY(d.key) + margin.top + margin.bottom + svgWidth/4 ) + ")"; 
-                        }) // Adjust this based on your y-axis scale
-                        .attr("opacity", 0.7)
-                        .attr("fill", "red")
-                        .attr("stroke", "#000")
-                        .attr("stroke-width", 0.1)
-                        .attr("d", function(d) { return d3.line()
-                                .curve(d3.curveBasis)
-                                        .x(function(d) { 
-                                                // console.log(d);
-                                                return scatterX(d[0]);
-                                         }) // Adjust this based on your x-axis scale
-                                        .y(function(d) { 
-                                                return scatterY(d[1]); 
-                                        })(d.density); 
-                                }); // Adjust this based on your y-axis scale
+                // // Add areas
+                // svg.selectAll("areas")
+                //         .data(allDensity)
+                //         .enter()
+                //         .append("path")
+                //         .attr("transform", function(d) {
+                //                 return "translate(" + (margin.left*3) + "," + ( -scatterY(d.key) + margin.top  + svgWidth/4 ) + ")"; 
+                //         }) // Adjust this based on your y-axis scale
+                //         .attr("opacity", 0.7)
+                //         .attr("fill", "green")
+                //         .attr("stroke", "#000")
+                //         .attr("stroke-width", 0.1)
+                //         .attr("d", function(d) { return d3.line()
+                //                 .curve(d3.curveBasis)
+                //                         .x(function(d) { 
+                //                                 // console.log(d);
+                //                                 return scatterX(d[0]);
+                //                          }) // Adjust this based on your x-axis scale
+                //                         .y(function(d) { 
+                //                                 return scatterY(d[1]); 
+                //                         })(d.density); 
+                //                 }); // Adjust this based on your y-axis scale
 
               
 
