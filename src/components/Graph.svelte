@@ -64,7 +64,7 @@
         }
 
         function filterByYearAndUpdateClass(category, button) {
-                console.log(select, eruptionIndex);
+                // console.log(select, eruptionIndex);
                 if (nextEruptionMode === 1){
                         select = 1;
                         eruptionIndex = 0; 
@@ -123,6 +123,7 @@
         }
 
         function updateFilteredData() {
+                console.log("nextEruptionMode ", nextEruptionMode);
                 filteredVolcanos = US_volcanos.filter(d => {
                         const yearMatches = filterState.year === 'pre-1800s' ? d.year < 1800 : filterState.year !== null ? d.year >= filterState.year && d.year <= filterState.year + 99 : true; 
                         const locationMatches = filterState.location ? d.location === filterState.location : true;
@@ -137,7 +138,13 @@
                         dots.remove();
                         populateScatter(svg);
                 }
-                
+                if (nextEruptionMode == 0) {
+                        eruptionIndex = 1;
+                        nextEruptionMode = 0;
+                        select = 0;
+                        hideTooltip();
+                }
+                slicing = filteredVolcanos;
         }
 
 
@@ -163,8 +170,10 @@
                 // Function to update SVG when user resizes window
                 function updateSize() {
 
-                        svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-                        svgHeight = parseFloat(d3.select('svg').style('height'));
+                        graphTable = d3.select('th').node().getBoundingClientRect();
+
+                        svgWidth = parseFloat(graphTable.width)/3;
+                        svgHeight = parseFloat(graphTable.height);
 
 
                         svg.attr("width", svgWidth + margin.left + margin.right)
@@ -174,7 +183,7 @@
 
                         // Update the x-axis scale
                         scatterX.range([0, svgWidth]);
-                        scatterY.range([0, svgWidth * yScale]);
+                        scatterY.range([0, svgWidth * yScaleFactor]);
 
                         svg.select('.x-axis').call(d3.axisBottom(scatterX))
                            .selectAll("text").style('font-size', fontSize + "px");
@@ -183,19 +192,22 @@
 
                         dots.attr('transform', 'translate(' + (margin.left*3) + ',' + ( svgWidth/4 + margin.top ) + ')');
 
-                        console.log("Update size", svgWidth, svgHeight);
+                        // console.log("Update size", svgWidth, svgHeight);
 
                 }
 
-                console.log("eruptionIndexing");
+                // console.log("eruptionIndexing");
                 
-                svgWidth = parseFloat(d3.select('svg').style('width'))/3;
-                svgHeight = parseFloat(d3.select('svg').style('height'));
+                let graphTable = d3.select('th').node().getBoundingClientRect();
 
+                svgWidth = parseFloat(graphTable.width)/3;
+                svgHeight = parseFloat(graphTable.height);
+
+        
 
 
                 let initialFontSize = Math.max(12, (svgWidth - margin.left - margin.right) / 110);
-                console.log(svgWidth, svgHeight, "Dimensions");
+                // console.log(svgWidth, svgHeight, "Dimensions");
 
                 svg = d3.select("#scatter")
                         .append("svg")
@@ -206,27 +218,20 @@
                         
                 // x-axis
                 scatterX = d3.scaleLinear().domain([min_year, max_year]).range([0, svgWidth]);
-                svg.append("g")
+                var x_axis = svg.append("g")
                         .attr("class", "x-axis")
                         .style('font-size', initialFontSize+'px')
                         .attr("transform",
                                 "translate(" + margin.left*3 + "," + (svgWidth + margin.top) + ")")
                         .call(d3.axisBottom(scatterX));
                 
-                let yScale = 3/4;
+                let yScaleFactor = 3/4;
 
                 // y-axis without tick marks
-                scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScale]);
-                // svg.append("g")
-                //         .attr("class", "y-axis")
-                //         .call(d3.axisLeft(scatterY))
-                //         .attr('text-anchor', 'end')
-                //         .style('font-size', '0px')
-                //         .attr('transform',
-                //                  'translate(' + (margin.left*3 + yOffset) + ',' + (margin.top + svgWidth/4 ) + ')')
+                scatterY = d3.scaleLinear().domain([8, 0]).range([0, svgWidth * yScaleFactor]);
         
                 // tick marks
-                var yMarks = svg.append("g")
+                var y_axis = svg.append("g")
                         .attr("class", "y-axis-marks")
                         .call(d3.axisLeft(scatterY))
                         .attr('text-anchor', 'end')
@@ -249,10 +254,71 @@
                         .attr('class', 'y-label')
                         .attr('text-anchor', 'middle')
                         .attr('text-align', 'center')
-                        .attr('transform', 'translate(' + (margin.left) + ',' + (margin.top + svgWidth * (1-yScale) + (svgWidth*yScale/2)) + ') rotate(-90)')
+                        .attr('transform', 'translate(' + (margin.left) + ',' + (margin.top + svgWidth * (1-yScaleFactor) + (svgWidth*yScaleFactor/2)) + ') rotate(-90)')
                         .text("Explosivity")
                         .style('font-size', initialFontSize + 2 + 'px');
 
+                function kernelDensityEstimator(kernel, X) {
+                        return function(V) {
+                                return X.map(function(x) {
+                                        return [x, d3.mean(V, function(v) { return kernel(x - v); })];
+                                });
+                        };
+                }
+                function kernelEpanechnikov(k) {
+                        return function(v) {
+                                return Math.abs(v /= k) <= 1 ? 0.75 * (1 - v * v) / k : 0;
+                        };
+                }
+
+                // Compute kernel density estimation for each column:
+                var kde = kernelDensityEstimator(kernelEpanechnikov(7), scatterX.ticks(10)) // increase this 40 for more accurate density.
+                var allDensity = []
+                var categories = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+                var n = categories.length;
+                let i;
+                for (let i = 0; i < n; i++) {
+                        let category = categories[i];
+                        let values = filteredVolcanos.filter(d => d.Volcano_explosive_index == category).map(d => d.year);
+                        // console.log("Values for category " + category + ":", values); // Log values for debugging
+                        // console.log("Category", category, values);
+                        let density = kde(values);
+                        // console.log("Density for category " + category + ":", density); // Log density for debugging
+                        allDensity.push({ key: category, density: density });
+                }
+                console.log(allDensity);
+
+                // Define x-scale (assuming `scatterX` is already defined)
+                const xScale = scatterX;
+
+                // Define y-scale for the density curves
+                const yScale = scatterY;
+
+                // Add areas
+                svg.selectAll(".areas")
+                        .data(allDensity)
+                        .enter()
+                        .append("path")
+                        .attr("class", "areas")
+                        .attr("transform", function(d) {
+                                return "translate(" + (margin.left*3) + "," + ( -scatterY(d.key) + margin.top + margin.bottom + svgWidth/4 ) + ")"; 
+                        }) // Adjust this based on your y-axis scale
+                        .attr("opacity", 0.7)
+                        .attr("fill", "red")
+                        .attr("stroke", "#000")
+                        .attr("stroke-width", 0.1)
+                        .attr("d", function(d) { return d3.line()
+                                .curve(d3.curveBasis)
+                                        .x(function(d) { 
+                                                // console.log(d);
+                                                return scatterX(d[0]);
+                                         }) // Adjust this based on your x-axis scale
+                                        .y(function(d) { 
+                                                return scatterY(d[1]); 
+                                        })(d.density); 
+                                }); // Adjust this based on your y-axis scale
+
+              
 
                 dots = svg.append('g')
                         .selectAll('dot')
@@ -267,12 +333,16 @@
 
 
 
+
+
+
                         
                 // updateSize when user resizes window
                 window.addEventListener("resize", updateSize);
         })
 
         function populateScatter(svgg) {
+                // console.log("populate scatter", filteredVolcanos);
                 dots = svgg.append('g')
                         .selectAll('dot')
                         .data(filteredVolcanos)
@@ -296,7 +366,7 @@
                 let coords = [  
                         { lat: d['latitude'], long: d['longitude'] },
                         ].map(p => projection([p.long, p.lat]))
-                //$: console.log(coords[0][0])
+                //$: // console.log(coords[0][0])
                 return coords[0][0]
         }
 
@@ -304,8 +374,8 @@
                 let coords = [
 		        { lat: d['latitude'], long: d['longitude'] },
 	                ].map(p => projection([p.long, p.lat]))
-                //$: console.log(d['longitude'])
-                //$: console.log(coords[0][1])
+                //$: // console.log(d['longitude'])
+                //$: // console.log(coords[0][1])
 
                 return coords[0][1]
         }
@@ -321,14 +391,14 @@
 
         $: US_Tsunami = d3.group(US_volcanos, d => d.Tsunami_caused);
         $: US_earthquake = d3.group(US_volcanos, d => d.Earthquake_caused);
-        // $: console.log(deadly)
+        // $: // console.log(deadly)
 
         function explosive(groups) {
                 
                 return (2.5 * groups.Volcano_explosive_index)
         }
 
-        //console.log(points)
+        //// console.log(points)
         // debugger;
 
         function showTooltip(d, newX=null, newY=null) {
@@ -340,14 +410,14 @@
                         // Get the position of the erupt circle
                         const circle = document.querySelector('#highlighted');
                         const circleRect = circle.getBoundingClientRect();
-                        console.log(circleRect);
+                        // console.log(circleRect);
                         const circleX = parseFloat(circleRect.left) + 50;
                         const circleY = parseFloat(circleRect.top) + 700;
                         // Calculate the tooltip position
                         x = circleX;
                         y = circleY;
                 }
-                console.log("showTooltip ", x, y);
+                // console.log("showTooltip ", x, y);
                 d3.select("#tooltip")
                   .style("visibility", "visible")
                   .html(`<b>${d.name}</b><br>Year: ${
@@ -383,7 +453,7 @@
 
   	$: if (eruptionIndex === 0) {
     		slicing = filteredVolcanos.slice(0, mapper);
-  	}
+  	} 
         
 </script>       
 
@@ -429,7 +499,9 @@
         updateFilteredData();
         const newVolcano = filteredVolcanos[select - 1];
         showTooltip(filteredVolcanos[select - 1]);
+
   }}
+  on:mouseleave={() => hideTooltip()}
 > Get Next Eruption </button>
 
 <button
@@ -441,6 +513,7 @@
         updateFilteredData();
         hideTooltip();
   }}
+  on:mouseleave={() => hideTooltip()}
 > Get All Eruptions </button>
 
 <table class="map_plot_split">

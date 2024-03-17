@@ -25,69 +25,72 @@
   <div class="foreground" slot="foreground">
     <!-- Can adjust this, but this is what I was working with while testing, it 
     uses 150% zoom on my monitor.  -->
-    <svg width="1200px" height="300px" viewBox="0 0 1200 300"> 
-      <style>
-          .volcano { fill: sienna; }
-          .lava-flow {
-              stroke: red;
-              stroke-width: 11; 
-              stroke-linecap: round;
-              fill: none;
-              opacity: 0;
-              animation: lavaFlowAnimation 5s 2s infinite;
-          }
+      <section class="AnimationBanner">
+        <svg width="50%" viewBox="0 0 1200 300" id='volcano-animation'> 
+          <style>
+              .volcano { 
+                fill: sienna; 
+              }
+              .lava-flow {
+                  stroke: red;
+                  stroke-width: 11; 
+                  stroke-linecap: round;
+                  opacity: 0;
+                  animation: lavaFlowAnimation 5s 2s infinite;
+              }
+              
+              .eruption-burst {
+                  fill: orange;
+                  opacity: 0;
+                  animation: eruptBurstAnimation 5s infinite;
+              }
+              @keyframes eruptBurstAnimation {
+                  0%, 100% { opacity: 0; }
+                  5%, 20% { opacity: 1; }
+                  25% { opacity: 0; }
+              }
+              @keyframes lavaFlowAnimation {
+                  0% { opacity: 0; }
+                  30% { opacity: 1; }
+                  90%, 100% { opacity: 0; }
+              }
+          </style>
+          <!-- First Volcano -->
+          <polygon class="volcano" points="145,250 245,250 195,150"/>
+          <circle class="eruption-burst" cx="195" cy="150" r="10" style="animation-delay: 0.3s;"/>
+          <circle class="eruption-burst" cx="195" cy="145" r="15" style="animation-delay: 0.6s;"/>
+          <path class="lava-flow" d="M195,150 Q205,200 215,250" style="animation-delay: 0.9s;"/>
+          <path class="lava-flow" d="M195,150 Q185,200 175,250" style="animation-delay: 0.9s;"/>
           
-          .eruption-burst {
-              fill: orange;
-              opacity: 0;
-              animation: eruptBurstAnimation 5s infinite;
-          }
-          @keyframes eruptBurstAnimation {
-              0%, 100% { opacity: 0; }
-              5%, 20% { opacity: 1; }
-              25% { opacity: 0; }
-          }
-          @keyframes lavaFlowAnimation {
-              0% { opacity: 0; }
-              30% { opacity: 1; }
-              90%, 100% { opacity: 0; }
-          }
-      </style>
-      <!-- First Volcano -->
-      <polygon class="volcano" points="145,250 245,250 195,150"/>
-      <circle class="eruption-burst" cx="195" cy="150" r="10" style="animation-delay: 0.3s;"/>
-      <circle class="eruption-burst" cx="195" cy="145" r="15" style="animation-delay: 0.6s;"/>
-      <path class="lava-flow" d="M195,150 Q205,200 215,250" style="animation-delay: 0.9s;"/>
-      <path class="lava-flow" d="M195,150 Q185,200 175,250" style="animation-delay: 0.9s;"/>
-      
-      <!-- Second Volcano -->
-      <polygon class="volcano" points="370,250 470,250 420,150"/>
-      <circle class="eruption-burst" cx="420" cy="150" r="10" style="animation-delay: 0.6s;"/>
-      <circle class="eruption-burst" cx="420" cy="145" r="15" style="animation-delay: 0.9s;"/>
-      <path class="lava-flow" d="M420,150 Q430,200 440,250" style="animation-delay: 1.2s;"/>
-      <path class="lava-flow" d="M420,150 Q410,200 400,250" style="animation-delay: 1.2s;"/>
-      
-      <!-- Third Volcano -->
-      <polygon class="volcano" points="595,250 695,250 645,150"/>
-      <circle class="eruption-burst" cx="645" cy="150" r="10" style="animation-delay: 0.9s;"/>
-      <circle class="eruption-burst" cx="645" cy="145" r="15" style="animation-delay: 1.2s;"/>
-      <path class="lava-flow" d="M645,150 Q655,200 665,250" style="animation-delay: 1.5s;"/>
-      <path class="lava-flow" d="M645,150 Q635,200 625,250" style="animation-delay: 1.5s;"/>
-      
-      <!-- Fourth Volcano -->
-      <polygon class="volcano" points="820,250 920,250 870,150"/>
-      <circle class="eruption-burst" cx="870" cy="150" r="10" style="animation-delay: 1.2s;"/>
-      <circle class="eruption-burst" cx="870" cy="145" r="15" style="animation-delay: 1.5s;"/>
-      <path class="lava-flow" d="M870,150 Q880,200 890,250" style="animation -delay: 1.8s;"/>
-      <path class="lava-flow" d="M870,150 Q860,200 850,250" style="animation-delay: 1.8s;"/>
+          <!-- Second Volcano -->
+          <polygon class="volcano" points="370,250 470,250 420,150"/>
+          <circle class="eruption-burst" cx="420" cy="150" r="10" style="animation-delay: 0.6s;"/>
+          <circle class="eruption-burst" cx="420" cy="145" r="15" style="animation-delay: 0.9s;"/>
+          <path class="lava-flow" d="M420,150 Q430,200 440,250" style="animation-delay: 1.2s;"/>
+          <path class="lava-flow" d="M420,150 Q410,200 400,250" style="animation-delay: 1.2s;"/>
+          
+          <!-- Third Volcano -->
+          <polygon class="volcano" points="595,250 695,250 645,150"/>
+          <circle class="eruption-burst" cx="645" cy="150" r="10" style="animation-delay: 0.9s;"/>
+          <circle class="eruption-burst" cx="645" cy="145" r="15" style="animation-delay: 1.2s;"/>
+          <path class="lava-flow" d="M645,150 Q655,200 665,250" style="animation-delay: 1.5s;"/>
+          <path class="lava-flow" d="M645,150 Q635,200 625,250" style="animation-delay: 1.5s;"/>
+          
+          <!-- Fourth Volcano -->
+          <polygon class="volcano" points="820,250 920,250 870,150"/>
+          <circle class="eruption-burst" cx="870" cy="150" r="10" style="animation-delay: 1.2s;"/>
+          <circle class="eruption-burst" cx="870" cy="145" r="15" style="animation-delay: 1.5s;"/>
+          <path class="lava-flow" d="M870,150 Q880,200 890,250" style="animation -delay: 1.8s;"/>
+          <path class="lava-flow" d="M870,150 Q860,200 850,250" style="animation-delay: 1.8s;"/>
 
-      <!-- Fifth Volcano -->
-      <polygon class="volcano" points="1045,250 1145,250 1095,150"/>
-      <circle class="eruption-burst" cx="1095" cy="150" r="10" style="animation-delay: 1.5s;"/>
-      <circle class="eruption-burst" cx="1095" cy="145" r="15" style="animation-delay: 1.8s;"/>
-      <path class="lava-flow" d="M1095,150 Q1105,200 1115,250" style="animation-delay: 2.1s;"/>
-      <path class="lava-flow" d="M1095,150 Q1085,200 1075,250" style="animation-delay: 2.1s;"/>
-  </svg>
+          <!-- Fifth Volcano -->
+          <polygon class="volcano" points="1045,250 1145,250 1095,150"/>
+          <circle class="eruption-burst" cx="1095" cy="150" r="10" style="animation-delay: 1.5s;"/>
+          <circle class="eruption-burst" cx="1095" cy="145" r="15" style="animation-delay: 1.8s;"/>
+          <path class="lava-flow" d="M1095,150 Q1105,200 1115,250" style="animation-delay: 2.1s;"/>
+          <path class="lava-flow" d="M1095,150 Q1085,200 1075,250" style="animation-delay: 2.1s;"/>
+      </svg>
+    </section>
     <section class="WriteUp">
       <h1 class="title">Are Volcanoes Becoming Deadlier?</h1>
       <h2> A visualization by David Lycke, Dhilan Sunanda Bong, and Joshua Huang</h2>
@@ -149,6 +152,10 @@
 </Scroller>
 
 <style>
+  #volcano-animation {
+    display:block;
+    margin:auto;
+  }
   .Graph {
     height: 110vh;
     background-color: lightblue; /* 20% opaque */
@@ -194,7 +201,14 @@
   }
 
   .para {
-    padding: 1em
+    padding: 1em;
+    font-size: 18px;
+  }
+  h1 {
+    text-align:center;
+    font-size: 26px;
+    color:black;
+    margin: 2px;
   }
 
   h2 {
@@ -207,4 +221,5 @@
     margin:15vh;
   }
   
+
 </style>
