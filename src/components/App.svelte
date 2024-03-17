@@ -6,7 +6,7 @@
     import Pompeii from './Pompeii.svelte';
     let volcanos = [];
     let US_volcanos = [];
-    let selected = Graph
+    let selected = Pompeii
 
     onMount(async () => {
         const res = await fetch(
